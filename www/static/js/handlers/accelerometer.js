@@ -11,6 +11,7 @@ function Accelerometer() {
 	this.options = { frequency: 10, movementSensitivity: 2 };
 	this.startView = null;
 	this.acceleration = {};
+	this.breakpoint = false;
 
 	this.startWatch();
 }
@@ -108,8 +109,12 @@ Accelerometer.prototype.getMovementDirection = function() {
 /**
  *	Checks if the movement is different than the expected path
  */
-Accelerometer.prototype.checkForBreakpoint = function() {
-
+Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
+	if(newAcceleration.x - this.acceleration.x <= -1 || newAcceleration.x - this.acceleration.x >= 1 || 
+	   newAcceleration.y - this.acceleration.y <= -1 || newAcceleration.y - this.acceleration.y >= 1 ||
+	   newAcceleration.z - this.acceleration.z <= -1 || newAcceleration.z - this.acceleration.z >= 1 ) {
+		this.breakpoint = true;
+	}
 }
 
 /** Get & Set function */ 
