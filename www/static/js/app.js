@@ -12,6 +12,13 @@
 			navigator.splashscreen.hide();
 		}, update: function() {
 
+			setInterval(function() {
+				if(sensors.accelerometer.breakpoint) {
+
+
+					sensors.accelerometer.breakpoint = false;
+				}
+			}, 500);
         } 
 	};
 
