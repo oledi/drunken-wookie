@@ -62,6 +62,9 @@ Accelerometer.prototype.onSuccses = function(acceleration) {
 		} 
 	}
 
+	// check for breakpoints between old and new data
+	this.checkForBreakpoint(acceleration);
+
 	this.acceleration = {
 		x: acceleration.x,
 		y: acceleration.y,
@@ -102,6 +105,13 @@ Accelerometer.prototype.getMovementDirection = function() {
 	return movement;
 }
 
+/**
+ *	Checks if the movement is different than the expected path
+ */
+Accelerometer.prototype.checkForBreakpoint = function() {
+
+}
+
 /** Get & Set function */ 
 /**
  *	Set the update frequency
@@ -120,3 +130,4 @@ Accelerometer.prototype.setUpdateFrequency = function(speed) {
 Accelerometer.prototype.setMovementSensitivity = function(sensitivity) {
 	this.options.movementSensitivity = sensitivity;
 }
+
