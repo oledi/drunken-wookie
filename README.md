@@ -9,6 +9,8 @@ Floyd van Boksel
 
 To-do:
 Create accelerometer object (Floyd)
+Create database 
 Create Capture function
 Create excersice function
 Create feedback function that respondes when it needs to
+
