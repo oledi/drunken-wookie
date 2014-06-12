@@ -14,3 +14,5 @@ To-do:
 - Create excersice function
 - Create feedback function that respondes when it needs to
 
+Goals:
+- Getting exactly 1337 commits, just for Vasillis ;-)
