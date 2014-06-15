@@ -111,12 +111,14 @@ Accelerometer.prototype.getMovementDirection = function() {
  *	Checks if the movement is different than the expected path
  */
 Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
+	var currentDirrection = this.getMovementDirection();
+	this.breakpoint = false;
 	if(newAcceleration.x - this.acceleration.x <= -1 || newAcceleration.x - this.acceleration.x >= 1 || 
 	   newAcceleration.y - this.acceleration.y <= -1 || newAcceleration.y - this.acceleration.y >= 1 ||
-	   newAcceleration.z - this.acceleration.z <= -1 || newAcceleration.z - this.acceleration.z >= 1 ) {
+	   newAcceleration.z - this.acceleration.z <= -1 || newAcceleration.z - this.acceleration.z >= 1 ||
+	   currentDirrection.movX != this.acceleration.movement.movX || 
+	   currentDirrection.movY != this.acceleration.movement.movY) {
 		this.breakpoint = true;
-	}else {
-
 	}
 }
 
