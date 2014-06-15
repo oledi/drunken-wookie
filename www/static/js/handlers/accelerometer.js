@@ -7,7 +7,7 @@
  */
 
 function Accelerometer() {
-	this.watchID = null;
+	this.watchId = null;
 	this.options = { frequency: 10, movementSensitivity: 2 };
 	this.startView = null;
 	this.acceleration = {};
@@ -31,15 +31,15 @@ Function.prototype.bind = function(scope) {
  *	Start the watch for the accelerometer
  */
 Accelerometer.prototype.startWatch = function() {
-	this.watchID = navigator.accelerometer.watchAcceleration(this.onSuccses.bind(this), this.onError, this.options);
+	this.watchId = navigator.accelerometer.watchAcceleration(this.onSuccses.bind(this), this.onError, this.options);
 }
 
 /**
  *	Stop the watch for the accelerometer
  */
 Accelerometer.prototype.stopWatch = function() {
-	if( this.watchID !== null ) {
-		navigator.accelerometer.clearWatch(this.watchID);
+	if( this.watchId !== null ) {
+		navigator.accelerometer.clearWatch(this.watchId);
 	}
 }
 
