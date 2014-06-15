@@ -130,7 +130,9 @@ Accelerometer.prototype.getMovementDirection = function() {
 }
 
 /**
- *	Checks if the movement is different than the expected path
+ *	Checks for breakpoints. 
+ *	These can excists from going from left to right and such or
+ *	sudden movements upwards/downwards.
  */
 Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	var currentDirrection = this.getMovementDirection();
