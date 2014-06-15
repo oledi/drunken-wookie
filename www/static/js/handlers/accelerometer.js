@@ -9,7 +9,6 @@
 function Accelerometer() {
 	this.watchId = null;
 	this.options = { frequency: 50, movementSensitivity: 2 };
-	this.startView = null;
 	this.acceleration = {};
 	this.breakpoint = false;
 
@@ -54,24 +53,19 @@ Accelerometer.prototype.onError = function() {
  *	Update the acceleration and set the start view
  */
 Accelerometer.prototype.onSuccses = function(acceleration) {
-	if(this.startView === null) {
-		this.startView = {
-			x: acceleration.x,
-			y: acceleration.y,
-			z: acceleration.z,
-			timestamp: acceleration.timestamp
-		} 
+	if(this.startVieuw === null) {
+		this.startVieuw.x = acceleration.x;
+		this.startVieuw.y = acceleration.y;
+		this.startVieuw.z = acceleration.z;
+		this.startVieuw.timestamp = acceleration.timestamp
 	}
 
-	// check for breakpoints between old and new data
 	this.checkForBreakpoint(acceleration);
 
-	this.acceleration = {
-		x: acceleration.x,
-		y: acceleration.y,
-		z: acceleration.z,
-		timestamp: acceleration.timestamp
-	}
+	this.acceleration.x = acceleration.x;
+	this.acceleration.y = acceleration.y;
+	this.acceleration.z = acceleration.z;
+	this.acceleration.timestamp = acceleration.timestamp;
 }
 
 /**
@@ -82,28 +76,35 @@ Accelerometer.prototype.onSuccses = function(acceleration) {
 Accelerometer.prototype.getMovementDirection = function() {
 	var movement = {};
 
-	if(this.startView == null) {
-		movement.movX = 0;
-		movement.movY = 0;
-	}else {
-		if((this.acceleration.x - this.startView.x) > this.options.movementSensitivity) {
+	if(	this.acceleration.previousPos.x != null && 
+		this.acceleration.previousPos.y != null &&
+		this.acceleration.previousPos.z != null	) {
+			
+		if((this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity) {
 			movement.movX = -2;
-		}else if((this.acceleration.x - this.startView.x) < -this.options.movementSensitivity) {
+		}else if((this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity) {
 			movement.movX = 2;
 		}else{
 			movement.movX = 0;
 		}
 
-		if((this.acceleration.y - this.startView.y) > this.options.movementSensitivity) {
+		if((this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity) {
 			movement.movY = 2;
-		}else if((this.acceleration.y - this.startView.y) < -this.options.movementSensitivity) {
+		}else if((this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity) {
 			movement.movY = -2;
 		}else {
 			movement.movY = 0;
-		}
+		}	
+	}else {
+		this.acceleration.previousPos.x = this.acceleration.x;
+		this.acceleration.previousPos.y = this.acceleration.y;
+		this.acceleration.previousPos.z = this.acceleration.z;
+		this.acceleration.previousPos.timestamp = this.acceleration.timestamp);
+
+		movement.movX = 0;
+		movement.movY = 0;
 	}
 	
-	this.acceleration.movement = movement;
 	return movement;
 }
 
@@ -112,12 +113,13 @@ Accelerometer.prototype.getMovementDirection = function() {
  */
 Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	var currentDirrection = this.getMovementDirection();
+
 	this.breakpoint = false;
 	if(newAcceleration.x - this.acceleration.x <= -2 || newAcceleration.x - this.acceleration.x >= 2 || 
 	   newAcceleration.y - this.acceleration.y <= -2 || newAcceleration.y - this.acceleration.y >= 2 ||
 	   newAcceleration.z - this.acceleration.z <= -2 || newAcceleration.z - this.acceleration.z >= 2 ||
-	   currentDirrection.movX != this.acceleration.movement.movX || 
-	   currentDirrection.movY != this.acceleration.movement.movY) {
+	   currentDirrection.movX != this.acceleration.movement.movX || currentDirrection.movY != this.acceleration.movement.movY) {
+	   	this.acceleration.movement = movement;
 		this.breakpoint = true;
 	}
 }
