@@ -8,7 +8,7 @@
 
 function Accelerometer() {
 	this.watchId = null;
-	this.options = { frequency: 10, movementSensitivity: 2 };
+	this.options = { frequency: 50, movementSensitivity: 2 };
 	this.startView = null;
 	this.acceleration = {};
 	this.breakpoint = false;
@@ -82,7 +82,7 @@ Accelerometer.prototype.onSuccses = function(acceleration) {
 Accelerometer.prototype.getMovementDirection = function() {
 	var movement = {};
 
-	if(this.startView === null) {
+	if(this.startView == null) {
 		movement.movX = 0;
 		movement.movY = 0;
 	}else {
@@ -113,9 +113,9 @@ Accelerometer.prototype.getMovementDirection = function() {
 Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	var currentDirrection = this.getMovementDirection();
 	this.breakpoint = false;
-	if(newAcceleration.x - this.acceleration.x <= -1 || newAcceleration.x - this.acceleration.x >= 1 || 
-	   newAcceleration.y - this.acceleration.y <= -1 || newAcceleration.y - this.acceleration.y >= 1 ||
-	   newAcceleration.z - this.acceleration.z <= -1 || newAcceleration.z - this.acceleration.z >= 1 ||
+	if(newAcceleration.x - this.acceleration.x <= -2 || newAcceleration.x - this.acceleration.x >= 2 || 
+	   newAcceleration.y - this.acceleration.y <= -2 || newAcceleration.y - this.acceleration.y >= 2 ||
+	   newAcceleration.z - this.acceleration.z <= -2 || newAcceleration.z - this.acceleration.z >= 2 ||
 	   currentDirrection.movX != this.acceleration.movement.movX || 
 	   currentDirrection.movY != this.acceleration.movement.movY) {
 		this.breakpoint = true;
