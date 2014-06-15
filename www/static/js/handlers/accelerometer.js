@@ -10,6 +10,10 @@ function Accelerometer() {
 	this.watchId = null;
 	this.options = { frequency: 50, movementSensitivity: 1 };
 	this.acceleration = {
+		movement: {
+			movX: null,
+			movY: null
+		},
 		previousPos: {
 			x: null,
 			y: null,
@@ -76,34 +80,78 @@ Accelerometer.prototype.onSuccses = function(acceleration) {
 }
 
 /**
- *	Checks if the movement is different than the expected path
+ *	Get the direction the accelerometer is moving
+ *
+ *	@return Object 	movement
  */
-Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
-	this.breakpoint = false;
+Accelerometer.prototype.getMovementDirection = function() {
+	// right / down is positive
+	// left / up is negative
+	var movement = {
+		movX: 0,
+		movY: 0
+	};
 
 	if(	this.acceleration.previousPos.x != null && 
 		this.acceleration.previousPos.y != null &&
 		this.acceleration.previousPos.z != null	) {
 			
-		if((this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity ||
-			(this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity ||
-			(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity ||
-			(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity ||
-			(this.acceleration.z - this.acceleration.previousPos.z) > this.options.movementSensitivity ||
-			(this.acceleration.z - this.acceleration.previousPos.z < -this.options.movementSensitivity)) {
-			this.acceleration.previousPos.x = this.acceleration.x;
-			this.acceleration.previousPos.y = this.acceleration.y;
-			this.acceleration.previousPos.z = this.acceleration.z;
-			this.acceleration.previousPos.timestamp = this.acceleration.timestamp;
-			this.breakpoint = true;
+		if((this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity) {
+			movement.movX = -2;
+		}else if((this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity) {
+			movement.movX = 2;
+		}else{
+			movement.movX = 0;
 		}
 
+		if((this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity) {
+			movement.movY = 2;
+		}else if((this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity) {
+			movement.movY = -2;
+		}else {
+			movement.movY = 0;
+		}	
 	}else {
 		this.acceleration.previousPos.x = this.acceleration.x;
 		this.acceleration.previousPos.y = this.acceleration.y;
 		this.acceleration.previousPos.z = this.acceleration.z;
 		this.acceleration.previousPos.timestamp = this.acceleration.timestamp;
+
+		movement.movX = 0;
+		movement.movY = 0;
 	}
+
+	return movement;
+}
+
+/**
+ *	Checks if the movement is different than the expected path
+ */
+Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
+	var currentDirrection = this.getMovementDirection();
+	this.breakpoint = false;
+
+	if(this.acceleration.movement.movX == null && this.acceleration.movement.movY == null) {
+		this.acceleration.movement.movX = currentDirrection.movX;
+		this.acceleration.movement.movY = currentDirrection.movY;
+	}  
+
+	if(this.acceleration.movement.movX != currentDirrection.movX || this.acceleration.movement.movY != currentDirrection.movY) {
+		this.breakpoint = true;
+	}else if(
+		(this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity && currentDirrection.movX == -2 ||
+		(this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity && currentDirrection.movX == 2 ||
+		(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity && currentDirrection.movY == -2 ||
+		(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity && currentDirrection.movY == 2 ||
+		currentDirrection.movX == 0 || 
+		currentDirrection.movY == 0){
+		this.breakpoint = false;
+	}else {
+		this.breakpoint = true;
+	}
+
+	this.acceleration.movement.movX = currentDirrection.movX;
+	this.acceleration.movement.movY = currentDirrection.movY;
 }
 
 /** Get & Set function */ 
