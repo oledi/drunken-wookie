@@ -103,6 +103,7 @@ Accelerometer.prototype.getMovementDirection = function() {
 		}
 	}
 	
+	this.acceleration.movement = movement;
 	return movement;
 }
 
@@ -114,6 +115,8 @@ Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	   newAcceleration.y - this.acceleration.y <= -1 || newAcceleration.y - this.acceleration.y >= 1 ||
 	   newAcceleration.z - this.acceleration.z <= -1 || newAcceleration.z - this.acceleration.z >= 1 ) {
 		this.breakpoint = true;
+	}else {
+
 	}
 }
 
