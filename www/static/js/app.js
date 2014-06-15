@@ -1,6 +1,8 @@
 (function () {
 	'use strict';
 
+	var exercise = null;
+
     var sensors = {
         accelerometer: null
     }
@@ -8,6 +10,7 @@
 	var controller = {
 		init: function () {
             sensors.accelerometer = new Accelerometer();
+            exercise = new Exercise(sensors.accelerometer);
 
 			navigator.splashscreen.hide();
 		}, update: function() {
@@ -24,4 +27,3 @@
 
 	document.addEventListener("deviceready", controller.init, false);
 })();
-      
