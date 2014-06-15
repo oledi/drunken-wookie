@@ -2,10 +2,10 @@ drunken-wookie
 ==============
 
 Project 3 HvA Minor Mobile Interaction in cooperation with:
-Martijn Engelkes
-Vincent van Dijck
-Fabian van der Wulp
-Floyd van Boksel
+- Martijn Engelkes
+- Vincent van Dijck
+- Fabian van der Wulp
+- Floyd van Boksel
 
 To-do:
 - Create accelerometer object (Floyd)
