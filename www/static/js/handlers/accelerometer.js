@@ -144,12 +144,12 @@ Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	if(this.acceleration.movement.movX != currentDirrection.movX || this.acceleration.movement.movY != currentDirrection.movY) {
 		this.breakpoint = true;
 	}else if(
-		(this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity && currentDirrection.movX == -2 ||
-		(this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity && currentDirrection.movX == 2 ||
-		(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity && currentDirrection.movY == -2 ||
-		(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity && currentDirrection.movY == 2 ||
-		currentDirrection.movX == 0 || 
-		currentDirrection.movY == 0) {
+		(this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity && currentDirrection.movX == this.movementDirections.left ||
+		(this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity && currentDirrection.movX == this.movementDirections.right ||
+		(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.left ||
+		(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.right ||
+		currentDirrection.movX == this.movementDirections.idle || 
+		currentDirrection.movY == this.movementDirections.idle) {
 		this.breakpoint = false;
 	}else {
 		this.breakpoint = true;
