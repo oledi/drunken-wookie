@@ -5,19 +5,106 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
 
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-	<link rel="stylesheet" type="text/css" href="../static/js/app.js">
-	<link rel="stylesheet" type="text/css" href="../static/js/handlers/accelerometer.js">
-	<style type="text/css">
-		/* Prevent copy paste for all elements except text fields */
-		*  { -webkit-user-select:none; -webkit-tap-highlight-color:rgba(255, 255, 255, 0); }
-		input, textarea  { -webkit-user-select:text; }
-		body { background-color:white; color:black }
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/functies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="../static/js/handlers/accelerometer.js"></script>
+
+
 	<script src='cordova.js'></script>
 </head>
 <body>
-	<!-- content goes here-->
-    <h1>test from other area</h1>
+
+<div id="page1" class="pages">
+	<div id="bgcontainer_menu">
+		<div id="container_menu">
+			<h1>FysioN</h1> 
+		</div>
+		<div id="container_feedback"> 
+			<p>Selecteer een oefening</p> 
+		</div>  
+	</div>
+
+	<div id="bgcontainer_oefeningen">
+		<div id="container_oefeningen"> 
+			<a href="#" name=""><div class="container_item">
+				<img src="img/biceps.jpg" />
+				<h1>BICEPS CURL</h1>
+			</div></a>
+			<a href="#" name="page2_wijn2"><div class="container_item">
+				<img src="img/squats.jpg" />
+				<h1>SQUATS</h1>
+			</div></a>
+			<a href="#" name="page2_wijn3"><div class="container_item">
+				<img src="img/legextension.jpg" />
+				<h1>LEG EXTENSION</h1>
+			</div></a>
+			<a href="#" name="page2_wijn4"><div class="container_item">
+				<img src="img/deadlift.jpg" />
+				<h1>DEADLIFT</h1>
+			</div></a>
+		</div>
+	</div>
+</div>	
+
+<div id="page2" class="pages">
+	<div id="bgcontainer_menu">
+		<div id="container_menu">
+			<h1>BICEPS CURL</h1> 
+		</div>
+		<div id="container_grafiek"> 
+			<img src="img/grafiek_oefening.png" />
+		</div>  
+	</div>
+
+	<div id="bgcontainer_oefening">
+		<div id="container_oefening"> 
+			<div class="container_item2">
+				<div class="links">
+					<h1>Vooruitgang </h1>
+					<p>Laatste 10 dagen</p>
+				</div>
+				<div class="rechts">
+					<h1>21%</h1>
+				</div>
+				
+			</div>
+			<a href="#" name="page2_wijn1"><div class="container_item">
+				<h1>Start oefening</h1>
+			</div></a>
+			<a href="#" name="page2_wijn2"><div class="container_item">
+				<h1>Statistieken</h1>
+			</div></a>
+		</div>
+	</div>
+</div>	
+
+<div id="page3" class="pages">
+	<div id="bgcontainer_menu">
+		<div id="container_menu">
+			<h1>BICEPS CURL EXERSIZE</h1> 
+		</div>
+	</div>
+
+	<div id="bgcontainer_oefening">
+		<div id="container_oefening"> 
+			<div class="container_item2">
+				<div class="btn_start"><h1>Start</h1></div>
+				<div class="btn_stop"><h1>Stop</h1></div>
+			</div>
+				
+		</div>
+	</div>
+</div>	
+	 
+
+
 </body>
+</html>
+
+
+  
+
 </html>
