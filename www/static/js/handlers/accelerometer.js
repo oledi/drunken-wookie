@@ -136,7 +136,6 @@ Accelerometer.prototype.getMovementDirection = function() {
  */
 Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	var currentDirrection = this.getMovementDirection();
-	this.breakpoint = false;
 
 	if(this.acceleration.movement.movX == null && this.acceleration.movement.movY == null) {
 		this.acceleration.movement.movX = currentDirrection.movX;
@@ -154,6 +153,7 @@ Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 		currentDirrection.movY == this.movementDirections.idle) {
 		this.breakpoint = false;
 	}else {
+		console.log('breakpoint');
 		this.breakpoint = true;
 	}
 
