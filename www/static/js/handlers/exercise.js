@@ -32,13 +32,16 @@ function Exercise(accelerometer) {
 	this.breakpoints = [];
 	this.accelerometer = accelerometer;
 	this.buttons = {};
+}
 
-	this.startRecord();
+Exercise.prototype.setStartBtnClick = function() {
+	var startBtn = document.getElementById("startBtn").click = this.startRecord();
+	//startBtn.onclick = this.startRecord();
 }
 
 Exercise.prototype.startRecord = function() {
 	var self = this;
-
+	console.log('hai');
 	self.exerciseIntervals.recordExercise = setInterval(function() {
 		if(self.accelerometer.breakpoint) {
 			var coordinates = {
