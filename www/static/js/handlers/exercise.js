@@ -29,36 +29,47 @@
 
 function Exercise(accelerometer) {
 	this.exerciseIntervals = {};
-	this.breakpoints = {};
+	this.breakpoints = [];
 	this.accelerometer = accelerometer;
 
-	this.start();
+	this.startRecord();
 }
 
-Exercise.prototype.start = function() {
+Exercise.prototype.startRecord = function() {
 	var self = this;
 
 	self.exerciseIntervals.excercise = setInterval(function() {
-		console.log(self.accelerometer.breakpoint);
+		if(self.accelerometer.breakpoint) {
+			var coordinates = {
+				x: self.accelerometer.acceleration.x,
+				y: self.accelerometer.acceleration.y,
+				z: self.accelerometer.acceleration.z,
+				timestamp: self.accelerometer.acceleration.timestamp
+			};
+
+			self.breakpoints.push(coordinates);
+			self.accelerometer.breakpoint = false;
+		}
+
 	}, 100);
 }
 
-Exercise.prototype.checkForBreak = function() {
+Exercise.prototype.endRecord = function() {
 	var self = this;
 
-	self.exerciseIntervals.update = setInterval(function() {
-		if(self.accelerometer.breakpoint) {
-					
+	/*
+	var	exerciseName = document.createElement("INPUT");
+	exerciseName.setAttribute("type", "text");
+	container.appendChild(exerciseName);
+	
 
-			self.accelerometer.breakpoint = false;
-		}
-	}, 500);
-}
+	if(typeof(Storage) !== "undefined") {
+	    // Code for localStorage/sessionStorage.
 
-
-
-Exercise.prototype.end = function() {
-
+	} else {
+	    // Sorry! No Web Storage support..
+	}
+	*/
 }
 
 Exercise.prototype.calculateAverages = function() {
