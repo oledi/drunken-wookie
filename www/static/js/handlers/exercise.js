@@ -31,6 +31,7 @@ function Exercise(accelerometer) {
 	this.exerciseIntervals = {};
 	this.breakpoints = [];
 	this.accelerometer = accelerometer;
+	this.buttons = {};
 
 	this.startRecord();
 }
@@ -38,7 +39,7 @@ function Exercise(accelerometer) {
 Exercise.prototype.startRecord = function() {
 	var self = this;
 
-	self.exerciseIntervals.excercise = setInterval(function() {
+	self.exerciseIntervals.recordExercise = setInterval(function() {
 		if(self.accelerometer.breakpoint) {
 			var coordinates = {
 				x: self.accelerometer.acceleration.x,
@@ -50,26 +51,37 @@ Exercise.prototype.startRecord = function() {
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
-
 	}, 100);
 }
 
 Exercise.prototype.endRecord = function() {
-	var self = this;
+	clearInterval(this.exerciseIntervals.recordExercise);
 
-	/*
-	var	exerciseName = document.createElement("INPUT");
-	exerciseName.setAttribute("type", "text");
-	container.appendChild(exerciseName);
-	
+	this.buttons.inputExerciseName = document.createElement("INPUT");
+	inputExerciseName.setAttribute("type", "text");
+	inputExerciseName.setAttribute("id", "exerciseName");
+	context.appendChild(inputExerciseName);
 
+	this.buttons.saveRecordBtn = document.createElement("input");
+    saveRecordBtn.type = "sendBtn";
+    saveRecordBtn.value = "save";
+    saveRecordBtn.onclick = this.saveRecord;
+    context.appendChild(saveRecordBtn);
+}
+
+Exercise.prototype.saveRecord = function() {
 	if(typeof(Storage) !== "undefined") {
 	    // Code for localStorage/sessionStorage.
+	    localStorage.setItem(this.buttons.inputExerciseName.value, JSON.stringify(this.breakpoints));
+	    
+	    var retrievedObject = localStorage.getItem(this.buttons.inputExerciseName.value);
+		console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
+	    this.buttons.inputExerciseName.parentNode.removeChild(this.buttons.inputExerciseName);
+		this.buttons.saveRecordBtn.parentNode.removeChild(this.buttons.saveRecordBtn);
 	} else {
 	    // Sorry! No Web Storage support..
 	}
-	*/
 }
 
 Exercise.prototype.calculateAverages = function() {
