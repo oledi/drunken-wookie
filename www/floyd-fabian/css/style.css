@@ -12,7 +12,7 @@ b{ font-weight: 500; font-style: normal;   font-family: 'museo700'; color: #813e
 ul{ margin: 0px; padding: 0px;}
 li{ padding: 0px; margin: 0px;}
 li{ color: #484848; line-height: 26px;}
-buttonm, input{ font-size: medium;}
+button, input{ font-size: medium;}
 
 @font-face {
     font-family: 'museo300';
@@ -56,7 +56,7 @@ buttonm, input{ font-size: medium;}
 #page1 #container_menu h1{  color: #fff; padding-left: 20px; padding-top: 20px; text-align: left; text-align: center;}
 #page1 #container_feedback{  width: 100%; padding: 20px 0px;  float: left;  background: #55d6bf; } 
 #page1 #container_feedback p{ padding-left: 20px; color: #095a4c; text-align: center;}
-#page1 #container_feedback a{ width: 30%; display: block; float: left; padding: 10px; 5px;  border-radius: 5px; color: #fff; margin-right: 10px; text-align: center;} 
+#page1 #container_feedback a{ width: 30%; display: block; float: left; padding: 10px 5px;  border-radius: 5px; color: #fff; margin-right: 10px; text-align: center;}
 #page1 #container_feedback a:nth-child(1){ margin-left: 20px; } 
 
 #bgcontainer_oefeningen{ width: 100%;  float: left; margin-top: 0px; }
