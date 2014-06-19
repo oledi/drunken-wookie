@@ -110,9 +110,9 @@ Accelerometer.prototype.getMovementDirection = function() {
 		}
 
 		if((this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity) {
-			movement.movY = this.movementDirections.left;
+			movement.movY = this.movementDirections.down;
 		}else if((this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity) {
-			movement.movY = this.movementDirections.right;
+			movement.movY = this.movementDirections.up;
 		}else {
 			movement.movY = this.movementDirections.idle;
 		}	
@@ -147,8 +147,8 @@ Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 	}else if(
 		(this.acceleration.x - this.acceleration.previousPos.x) > this.options.movementSensitivity && currentDirrection.movX == this.movementDirections.left ||
 		(this.acceleration.x - this.acceleration.previousPos.x) < -this.options.movementSensitivity && currentDirrection.movX == this.movementDirections.right ||
-		(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.left ||
-		(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.right ||
+		(this.acceleration.y - this.acceleration.previousPos.y) > this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.down ||
+		(this.acceleration.y - this.acceleration.previousPos.y) < -this.options.movementSensitivity && currentDirrection.movY == this.movementDirections.up ||
 		currentDirrection.movX == this.movementDirections.idle || 
 		currentDirrection.movY == this.movementDirections.idle) {
 		this.breakpoint = false;
