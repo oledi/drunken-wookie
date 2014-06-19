@@ -30,6 +30,7 @@
 function Exercise(accelerometer) {
 	this.exerciseIntervals = {};
 	this.breakpoints = [];
+	this.exercise;
 	this.accelerometer = accelerometer;
 	this.buttons = {};
 }
@@ -49,15 +50,24 @@ Exercise.prototype.startRecord = function() {
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
-	}, 100);
+	}, 50);
 }
 
 Exercise.prototype.startWatch = function() {
 	var self = this;
 
 	self.exerciseIntervals.watchExercise = setInterval(function() {
+		if(self.checkIfWithinBounds) {
 
+		}
 	}, 500);
+}
+
+Exercise.prototype.checkIfWithinBounds = function() {
+	var inBounds;
+
+
+	return inBounds;
 }
 
 Exercise.prototype.endRecord = function() {
@@ -86,13 +96,16 @@ Exercise.prototype.saveRecord = function() {
 
 		for(var h = 0; h < this.breakpoints.length - 2; h++) {
 			console.log('Movement directions');
-			this.accelerometer.getMovementDirectionBetween(this.breakpoints[h], this.breakpoints[h+1]);
+			var movementDirection = this.accelerometer.getMovementDirectionBetween(this.breakpoints[h], this.breakpoints[h+1]);
+			console.log('X movement : ' + movementDirection.movX);
+			console.log('Y movement : ' + movementDirection.movY);
 		}
 
 	    localStorage.setItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel', JSON.stringify(this.breakpoints));
 	    
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
+	    this.exercise = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
 		// example call to retrieve data from a specific entry
 		// console.log(JSON.parse(retrievedObject)[0].x);
 

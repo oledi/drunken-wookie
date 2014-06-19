@@ -151,6 +151,8 @@ Accelerometer.prototype.getMovementDirectionBetween = function(posOne, posTwo) {
 	}else {
 		movement.movY = this.movementDirections.idle;
 	}	
+
+	return movement;
 }
 
 /**

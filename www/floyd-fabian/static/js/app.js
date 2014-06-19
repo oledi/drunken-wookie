@@ -37,8 +37,8 @@
 				
 				exercise.saveRecord();
 
-				$('.pages').hide();
-				$('#page2').show();
+				// $('.pages').hide();
+				// $('#page2').show();
 			});
 
 			$('#page1').show();
