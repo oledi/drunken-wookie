@@ -128,6 +128,30 @@ Accelerometer.prototype.getMovementDirection = function() {
 
 	return movement;
 }
+/**
+ *	Get the movement direction between two positions
+ *	@param 	posOne		The intial position
+ *	@param 	posTwo		The position it's going two
+ */
+Accelerometer.prototype.getMovementDirectionBetween = function(posOne, posTwo) {
+	var movement = {};
+
+	if((posOne.x - posTwo.x) > this.options.movementSensitivity) {
+		movement.movX = this.movementDirections.left;
+	}else if((posOne.x - posTwo.x) < -this.options.movementSensitivity) {
+		movement.movX = this.movementDirections.right;
+	}else{
+		movement.movX = this.movementDirections.idle;
+	}
+
+	if((posOne.y - posTwo.y) > this.options.movementSensitivity) {
+		movement.movY = this.movementDirections.down;
+	}else if((posOne.y - posTwo.y) < -this.options.movementSensitivity) {
+		movement.movY = this.movementDirections.up;
+	}else {
+		movement.movY = this.movementDirections.idle;
+	}	
+}
 
 /**
  *	Checks for breakpoints. 
