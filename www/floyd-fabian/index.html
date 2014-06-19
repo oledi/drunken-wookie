@@ -1,115 +1,121 @@
 <!DOCTYPE html><!--HTML5 doctype-->
 <html>
 <head>
-	<title>Your New Application</title>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <title>Your New Application</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
 
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	
-	<script type="text/javascript" src="static/js/jquery.js"></script>
-	<!-- app logic -->
-	<script src="../static/js/handlers/exercise.js"></script>
-	<script src="../static/js/handlers/accelerometer.js"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-	<!-- main app -->
-	<script src="static/js/app.js"></script>
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <!-- app logic -->
+    <script src="../static/js/handlers/exercise.js"></script>
+    <script src="../static/js/handlers/accelerometer.js"></script>
 
-	<script src='cordova.js'></script>
+    <!-- main app -->
+    <script src="static/js/app.js"></script>
+
+    <script src='cordova.js'></script>
 </head>
 <body>
-	<div id="page1" class="pages">
-<!--
-		<div id="bgcontainer_menu">
-			<div id="container_menu">
-				<h1>FysioN</h1> 
-			</div>
-			<div id="container_feedback"> 
-				<p>Selecteer een oefening</p> 
-			</div>  
-		</div>
--->
+<div id="page1" class="pages">
 
-<!--
-		<div id="bgcontainer_oefeningen">
-			<div id="container_oefeningen"> 
-				<a href="#" name=""><div class="container_item">
-					<img src="static/img/biceps.jpg" />
-					<h1>BICEPS CURL</h1>
-				</div></a>
-				<a href="#" name="page2_wijn2"><div class="container_item">
-					<img src="static/img/squats.jpg" />
-					<h1>SQUATS</h1>
-				</div></a>
-				<a href="#" name="page2_wijn3"><div class="container_item">
-					<img src="static/img/legextension.jpg" />
-					<h1>LEG EXTENSION</h1>
-				</div></a>
-				<a href="#" name="page2_wijn4"><div class="container_item">
-					<img src="static/img/deadlift.jpg" />
-					<h1>DEADLIFT</h1>
-				</div></a>
-			</div>
-		</div>
--->
-	</div>	
+    <div id="bgcontainer_menu">
+        <div id="container_menu">
+            <h1>FysioN</h1>
+        </div>
+        <div id="container_feedback">
+            <p>Selecteer een oefening</p>
+        </div>
+    </div>
 
-	<div id="page2" class="pages">
-		<div id="bgcontainer_menu">
-			<div id="container_menu">
-				<h1>BICEPS CURL</h1> 
-			</div>
-			<div id="container_grafiek"> 
-				<img src="static/img/grafiek_oefening.png" />
-			</div>  
-		</div>
+    <div id="bgcontainer_oefeningen">
+        <div id="container_oefeningen">
+            <a href="#" name="">
+                <div class="container_item">
+                    <img src="static/img/biceps.jpg"/>
 
-		<div id="bgcontainer_oefening">
-			<div id="container_oefening"> 
-				<div class="container_item2">
-					<div class="links">
-						<h1>Vooruitgang </h1>
-						<p>Laatste 10 dagen</p>
-					</div>
-					<div class="rechts">
-						<h1>21%</h1>
-					</div>
-					
-				</div>
-				<a href="#" name="page2_wijn1"><div class="container_item">
-					<h1>Start oefening</h1>
-				</div></a>
-				<a href="#" name="page2_wijn2"><div class="container_item">
-					<h1>Statistieken</h1>
-				</div></a>
-			</div>
-		</div>
-	</div>	
+                    <h1>BICEPS CURL</h1>
+                </div>
+            </a>
+            <a href="#" name="page2_wijn2">
+                <div class="container_item">
+                    <img src="static/img/squats.jpg"/>
 
-	<div id="page3" class="pages">
-		<div id="bgcontainer_menu">
-			<div id="container_menu">
-				<h1>BICEPS CURL EXERSIZE</h1> 
-			</div>
-		</div>
+                    <h1>SQUATS</h1>
+                </div>
+            </a>
+            <a href="#" name="page2_wijn3">
+                <div class="container_item">
+                    <img src="static/img/legextension.jpg"/>
 
-		<div id="bgcontainer_oefening">
-			<div id="container_oefening"> 
-				<div class="container_item2">
-					<div id="startBtn" class="btn_start"><h1>Start</h1></div>
-					<div id="stopBtn" class="btn_stop"><h1>Stop</h1></div>
-				</div>
-			</div>
-		</div>
-	</div>	
-	 
-	 
+                    <h1>LEG EXTENSION</h1>
+                </div>
+            </a>
+            <a href="#" name="page2_wijn4">
+                <div class="container_item">
+                    <img src="static/img/deadlift.jpg"/>
 
+                    <h1>DEADLIFT</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
 
+<div id="page2" class="pages">
+    <div id="bgcontainer_menu">
+        <div id="container_menu">
+            <h1>BICEPS CURL</h1>
+        </div>
+        <div id="container_grafiek">
+            <img src="static/img/grafiek_oefening.png"/>
+        </div>
+    </div>
+
+    <div id="bgcontainer_oefening">
+        <div id="container_oefening">
+            <div class="container_item2">
+                <div class="links">
+                    <h1>Vooruitgang </h1>
+
+                    <p>Laatste 10 dagen</p>
+                </div>
+                <div class="rechts">
+                    <h1>21%</h1>
+                </div>
+
+            </div>
+            <a href="#" name="page2_wijn1">
+                <div class="container_item">
+                    <h1>Start oefening</h1>
+                </div>
+            </a>
+            <a href="#" name="page2_wijn2">
+                <div class="container_item">
+                    <h1>Statistieken</h1>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="page3" class="pages">
+    <div id="bgcontainer_menu">
+        <div id="container_menu">
+            <h1>BICEPS CURL EXERSIZE</h1>
+        </div>
+    </div>
+
+    <div id="bgcontainer_oefening">
+        <div id="container_oefening">
+            <div class="container_item2">
+                <div id="startBtn" class="btn_start"><h1>Start</h1></div>
+                <div id="stopBtn" class="btn_stop"><h1>Stop</h1></div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
-</html>
-
-
-  
-
 </html>
