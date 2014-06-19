@@ -46,6 +46,8 @@ Exercise.prototype.startRecord = function() {
 				timestamp: self.accelerometer.acceleration.timestamp
 			};
 
+
+			console.log('Breakpoint added');
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
@@ -82,16 +84,17 @@ Exercise.prototype.saveRecord = function() {
 		for(var z = 0; z < this.breakpoints.length - 2; z++) {
 			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
 		}
-		console.log(this.breakpoints[0].timestamp);
+		this.breakpoints[this.breakpoints.length - 1].duration = null;
 
-	    // Code for localStorage/sessionStorage.
-	    localStorage.setItem(this.buttons.inputExerciseName.value, JSON.stringify(this.breakpoints));
+	    localStorage.setItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel', JSON.stringify(this.breakpoints));
 	    
-	    var retrievedObject = localStorage.getItem(this.buttons.inputExerciseName.value);
-		console.log('retrievedObject: ', JSON.parse(retrievedObject));
+	    // example of getting an exercise from the localstorage
+	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
+		// example call to retrieve data from a specific entry
+		// console.log(JSON.parse(retrievedObject)[0].x);
 
-	    this.buttons.inputExerciseName.parentNode.removeChild(this.buttons.inputExerciseName);
-		this.buttons.saveRecordBtn.parentNode.removeChild(this.buttons.saveRecordBtn);
+	 	// this.buttons.inputExerciseName.parentNode.removeChild(this.buttons.inputExerciseName);
+		// this.buttons.saveRecordBtn.parentNode.removeChild(this.buttons.saveRecordBtn);
 	} else {
 	    // Sorry! No Web Storage support..
 	}
