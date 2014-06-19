@@ -34,16 +34,11 @@ function Exercise(accelerometer) {
 	this.buttons = {};
 }
 
-Exercise.prototype.setStartBtnClick = function() {
-	var startBtn = document.getElementById("startBtn").click = this.startRecord();
-	//startBtn.onclick = this.startRecord();
-}
-
 Exercise.prototype.startRecord = function() {
 	var self = this;
-	console.log('hai');
+
 	self.exerciseIntervals.recordExercise = setInterval(function() {
-		if(self.accelerometer.breakpoint) {
+		if(self.accelerometer.breakpoint) {	
 			var coordinates = {
 				x: self.accelerometer.acceleration.x,
 				y: self.accelerometer.acceleration.y,
@@ -55,6 +50,14 @@ Exercise.prototype.startRecord = function() {
 			self.accelerometer.breakpoint = false;
 		}
 	}, 100);
+}
+
+Exercise.prototype.startWatch = function() {
+	var self = this;
+
+	self.exerciseIntervals.watchExercise = setInterval(function() {
+
+	}, 500);
 }
 
 Exercise.prototype.endRecord = function() {
@@ -74,6 +77,13 @@ Exercise.prototype.endRecord = function() {
 
 Exercise.prototype.saveRecord = function() {
 	if(typeof(Storage) !== "undefined") {
+
+		// minus 2 to get the second last entry as last. Since that is the last entry that has a duration
+		for(var z = 0; z < this.breakpoints.length - 2; z++) {
+			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
+		}
+		console.log(this.breakpoints[0].timestamp);
+
 	    // Code for localStorage/sessionStorage.
 	    localStorage.setItem(this.buttons.inputExerciseName.value, JSON.stringify(this.breakpoints));
 	    
