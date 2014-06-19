@@ -1,9 +1,100 @@
+/* General styles */
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    font-size: 1em;
+    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) no-repeat;
+    font-family: 'Oxygen', sans-serif;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'museo500';
     font-size: 1em;
 }
+
+.title-bar {
+    position: absolute;
+    width: 100%;
+    background-color: #0B4370;
+    color: white;
+    text-align: center;
+}
+
+.title-bar h1 {
+    margin: 1.1em 0;
+}
+
+/* index.html */
+#pop {
+    background-image: none;
+}
+
+#pop-image {
+    float: left;
+}
+
+section > section,
+section > section a {
+    position: absolute;
+}
+
+section > section a {
+    padding: 10px;
+    border: 1px solid #5E5E5E;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #424242;
+}
+
+section > section a:nth-of-type(1),
+section > section a:nth-of-type(2) {
+    width: 60px;
+    height: 40px;
+}
+
+section > section a:nth-of-type(3),
+section > section a:nth-of-type(4) {
+    width: 52px;
+    height: 41px;
+}
+
+section > section a:nth-of-type(1) {
+    top: 190px;
+    left: 20px;
+}
+
+section > section a:nth-of-type(2) {
+    top: 190px;
+    left: 220px;
+}
+
+section > section a:nth-of-type(3) {
+    top: 420px;
+    left: 80px;
+}
+
+section > section a:nth-of-type(4) {
+    top: 420px;
+    left: 160px;
+}
+
+/* Exercises.html */
+
+
+
+
 
 
 /*.btn_start {*/
@@ -43,6 +134,31 @@ body {
     /*width: 100%;*/
 /*}*/
 
+@font-face {
+    font-family: 'museo300';
+    src: url('fonts/museo-300-webfont.eot');
+    src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-300-webfont.woff') format('woff'), url('fonts/museo-300-webfont.ttf') format('truetype'), url('fonts/museo-300-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('fonts/museo-500-webfont.eot');
+    src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-500-webfont.woff') format('woff'), url('fonts/museo-500-webfont.ttf') format('truetype'), url('fonts/museo-500-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('fonts/museo-700-webfont.eot');
+    src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-700-webfont.woff') format('woff'), url('fonts/museo-700-webfont.ttf') format('truetype'), url('fonts/museo-700-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 

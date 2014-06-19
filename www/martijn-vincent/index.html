@@ -1,28 +1,32 @@
-<!DOCTYPE html><!--HTML5 doctype-->
+<!DOCTYPE html>
 <html>
 <head>
-	<title>Your New Application</title>
+	<title>FysioApp</title>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 
 	<link rel="stylesheet" type="text/css" href="static/css/style.css">
 
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 
-    <!-- app logic -->
+    <!-- App logic -->
 	<script src="../static/js/handlers/exercise.js"></script>
 	<script src="../static/js/handlers/accelerometer.js"></script>
 
-	<!-- main app -->
+	<!-- Main app -->
 	<script src="static/js/app.js"></script>
 
 	<script src='cordova.js'></script>
 </head>
 <body id="pop">
-    <section>
+    <section class="title-bar">
         <h1>Welk lichaamsdeel wilt u trainen?</h1>
     </section>
     <section>
+        <img src="../martijn-vincent/static/img/achtergrond_pop.jpg" alt="pop" id="pop-image"/>
         <section>
             <a href="exercises.html">Rechter arm</a>
             <a href="exercises.html">Linker arm</a>

@@ -11,8 +11,8 @@ To-do:
 - Create accelerometer object (Floyd)
 - Create database
 - Create Capture function
-- Create excersice function
-- Create feedback function that respondes when it needs to
+- Create exercise function
+- Create feedback function that responds when it needs to
 
 Goals:
 - Getting exactly 1337 commits, just for Vasillis ;-)
