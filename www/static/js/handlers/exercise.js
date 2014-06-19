@@ -46,8 +46,6 @@ Exercise.prototype.startRecord = function() {
 				timestamp: self.accelerometer.acceleration.timestamp
 			};
 
-
-			console.log('Breakpoint added');
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
@@ -98,38 +96,4 @@ Exercise.prototype.saveRecord = function() {
 	} else {
 	    // Sorry! No Web Storage support..
 	}
-}
-
-Exercise.prototype.calculateAverages = function() {
-	/* 
-	// Ze array opbouw
-	this.breakpoints = [
-		*repeating* 0 = [
-			average = {
-				x = number
-				y = number
-				z = number
-				time = number
-			}
-			data = [
-				*repeating* 0 = {
-					x = number
-					y = number
-					z = number
-					timestamp: number
-				}	
-			]
-		]
- 	]
-
- 	The for loop blueprint
- 	
- 	for(var x = 0; x < this.breakpoints.length - 1; x++) {
-
- 		var averages {};
- 		for(var y = 0; y < this.breakpoints[x].length -1; y++) {
- 			
- 		}
- 	}
- 	*/
 }

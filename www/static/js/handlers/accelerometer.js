@@ -153,7 +153,6 @@ Accelerometer.prototype.checkForBreakpoint = function(newAcceleration) {
 		currentDirrection.movY == this.movementDirections.idle) {
 		this.breakpoint = false;
 	}else {
-		console.log('breakpoint');
 		this.breakpoint = true;
 	}
 
