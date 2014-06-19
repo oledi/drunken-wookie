@@ -8,11 +8,6 @@ Project 3 HvA Minor Mobile Interaction in cooperation with:
 - Floyd van Boksel
 
 To-do:
-- Create accelerometer object (Floyd)
-- Create database
-- Create Capture function
-- Create exercise function
-- Create feedback function that responds when it needs to
 - ~~Create accelerometer object (Floyd)~~ Done
 - ~~Create database (Floyd)~~ Currently localStorage. If possible/time avaible normal web based database & localStorage
 - ~~Create Capture function (Floyd)~~ Done, including save to localStorage
