@@ -11,7 +11,7 @@
 		init: function () {
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
-            exercise.setStartBtnClick();
+
 
 			navigator.splashscreen.hide();
 		}, update: function() {

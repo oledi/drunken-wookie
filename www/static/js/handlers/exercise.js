@@ -115,4 +115,8 @@ Exercise.prototype.saveRecord = function() {
 	}
 
 	this.startWatch();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
