@@ -6,7 +6,7 @@ body {
     display: inline-block;
     width: 100%;
     font-size: 1em;
-    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) no-repeat;
+    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) repeat-y;
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -23,6 +23,7 @@ h3 {
 }
 
 .title-bar {
+    padding: 0.8em 0;
     position: absolute;
     width: 100%;
     background-color: #0B4370;
@@ -31,7 +32,33 @@ h3 {
 }
 
 .title-bar h1 {
-    margin: 1.1em 0;
+    margin: 0 0 0.2em 0;
+}
+
+.title-bar h2 {
+    margin: 0.4em 0 0 0;
+    font-family: 'museo300';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.title-bar a {
+    position: absolute;
+    margin-top: 0.5em;
+    margin-bottom: 1px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: 'museo500';
+    font-size: 1.1em;
+
+}
+
+.title-bar img {
+    height: 15px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 3px;
 }
 
 /* index.html */
@@ -43,12 +70,12 @@ h3 {
     float: left;
 }
 
-section > section,
-section > section a {
+#categories,
+#categories a {
     position: absolute;
 }
 
-section > section a {
+#categories a {
     padding: 10px;
     border: 1px solid #5E5E5E;
     background-color: rgba(255, 255, 255, 0.7);
@@ -58,41 +85,86 @@ section > section a {
     color: #424242;
 }
 
-section > section a:nth-of-type(1),
-section > section a:nth-of-type(2) {
+#categories a:nth-of-type(1),
+#categories a:nth-of-type(2) {
     width: 60px;
     height: 40px;
 }
 
-section > section a:nth-of-type(3),
-section > section a:nth-of-type(4) {
+#categories a:nth-of-type(3),
+#categories a:nth-of-type(4) {
     width: 52px;
     height: 41px;
 }
 
-section > section a:nth-of-type(1) {
+#categories a:nth-of-type(1) {
     top: 190px;
     left: 20px;
 }
 
-section > section a:nth-of-type(2) {
+#categories a:nth-of-type(2) {
     top: 190px;
     left: 220px;
 }
 
-section > section a:nth-of-type(3) {
+#categories a:nth-of-type(3) {
     top: 420px;
     left: 80px;
 }
 
-section > section a:nth-of-type(4) {
+#categories a:nth-of-type(4) {
     top: 420px;
     left: 160px;
 }
 
 /* Exercises.html */
+#list {
+    margin-top: 65px;
+    display: inline-block;
+    width: 100%;
+}
 
+.list-row {
+    display: inline;
+    float: left;
+    clear: left;
+    width: 100%;
+}
 
+.list-item {
+    float: left;
+    width: 160px;
+    height: 160px;
+}
+
+.list-item a {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 9px auto 0 auto;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.42);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list-item a:active {
+    box-shadow: 0 0 15px #ffffff;
+}
+
+.list-item a img {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.list-item a p {
+    margin: 0;
+    padding: 0;
+}
 
 
 
