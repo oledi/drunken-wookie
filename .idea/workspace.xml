@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95e6489-af63-42a1-b152-e1bedf393e3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise1.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise2.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise3.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise4.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise5.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise6.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise7.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise8.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/exercises.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/exercises.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/index.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="drunken-wookie.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +28,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="92" selection-start="243" selection-end="243" vertical-scroll-proportion="0.17621145" vertical-offset="0" max-vertical-offset="3705">
+            <state line="19" column="3" selection-start="359" selection-end="359" vertical-scroll-proportion="0.4185022" vertical-offset="0" max-vertical-offset="3780">
               <folding />
             </state>
           </provider>
@@ -176,6 +165,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="martijn-vincent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drunken-wookie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drunken-wookie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="martijn-vincent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -530,7 +541,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="92" selection-start="243" selection-end="243" vertical-scroll-proportion="0.17621145" vertical-offset="0" max-vertical-offset="3705">
+        <state line="19" column="3" selection-start="359" selection-end="359" vertical-scroll-proportion="0.4185022" vertical-offset="0" max-vertical-offset="3780">
           <folding />
         </state>
       </provider>

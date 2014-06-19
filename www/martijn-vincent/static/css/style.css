@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     display: inline-block;
     width: 100%;
+    overflow:hidden;
     font-size: 1em;
     background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) repeat-y;
     font-family: 'Oxygen', sans-serif;
@@ -83,6 +84,10 @@ h3 {
     text-decoration: none;
     text-align: center;
     color: #424242;
+}
+
+#categories a:active {
+    box-shadow: 0 0 15px #ffffff;
 }
 
 #categories a:nth-of-type(1),
