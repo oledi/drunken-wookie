@@ -1,36 +1,11 @@
-/**
- *	First just collect all the data (breakpoints, positions and such)
- *	When everything is collected and the user pressed the stop button calculate the average time till the break
- *	Temp storage till calculation
- *		this.breakpoints = [
-			*repeating* 0 = [
-				average = [
-					x = number
-					y = number
-					z = number
-					time = number
-				]
-				*repeating* 0 = []
-					x = number
-					y = number
-					z = number
-					timestamp: number
-				]
-			]
- 		]
-
-		// general loop based on
- 		this.breakpoints.lengt
-
- 		// loop to get all the times
- 		// this.breakpoints.length - 1
-
- */
-
 function Exercise(accelerometer) {
 	this.exerciseIntervals = {};
 	this.breakpoints = [];
-	this.exercise;
+	this.exercise = {
+		marginForError: 1,
+		breakpointNumber: 0,
+		breakpoints: null
+	};
 	this.accelerometer = accelerometer;
 	this.buttons = {};
 }
@@ -55,17 +30,39 @@ Exercise.prototype.startRecord = function() {
 
 Exercise.prototype.startWatch = function() {
 	var self = this;
+	self.setTimeoutNextBreakpoint();
 
 	self.exerciseIntervals.watchExercise = setInterval(function() {
-		if(self.checkIfWithinBounds) {
+		console.log('hurr-duur-durr?');
+		var inBounds = self.checkIfWithinBounds();
+		if(inBounds) {
 
 		}
 	}, 500);
 }
 
-Exercise.prototype.checkIfWithinBounds = function() {
-	var inBounds;
+Exercise.prototype.setTimeoutNextBreakpoint = function() {
+	var self = this;
 
+	if(JSON.parse(self.exercise.breakpoints)[self.exercise.breakpointNumber].duration != null) {
+		var timeoutMiliseconds = JSON.parse(self.exercise.breakpoints)[self.exercise.breakpointNumber].duration;
+		self.exerciseIntervals.nextBreakpoint = setTimeout(function(){
+			self.exercise.breakpointNumber++;
+			self.setTimeoutNextBreakpoint();
+		}, timeoutMiliseconds);
+	}else {
+		window.clearInterval(self.exerciseIntervals.watchExercise);
+	}
+}
+
+Exercise.prototype.checkIfWithinBounds = function() {
+	var inBounds = true;
+	var currentPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
+	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
+	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
+	console.log('Direction output: ');
+	console.log(currentDirection.movX);
+	console.log(currentDirection.movY);
 
 	return inBounds;
 }
@@ -89,23 +86,24 @@ Exercise.prototype.saveRecord = function() {
 	if(typeof(Storage) !== "undefined") {
 
 		// minus 2 to get the second last entry as last. Since that is the last entry that has a duration
-		for(var z = 0; z < this.breakpoints.length - 2; z++) {
+		for(var z = 0; z < this.breakpoints.length - 1; z++) {
 			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
 		}
 		this.breakpoints[this.breakpoints.length - 1].duration = null;
 
-		for(var h = 0; h < this.breakpoints.length - 2; h++) {
-			console.log('Movement directions');
-			var movementDirection = this.accelerometer.getMovementDirectionBetween(this.breakpoints[h], this.breakpoints[h+1]);
-			console.log('X movement : ' + movementDirection.movX);
-			console.log('Y movement : ' + movementDirection.movY);
-		}
+		// Test to check movement direction
+		// for(var h = 0; h < this.breakpoints.length - 2; h++) {
+		// 	console.log('Movement directions');
+		// 	var movementDirection = this.accelerometer.getMovementDirectionBetween(this.breakpoints[h], this.breakpoints[h+1]);
+		// 	console.log('X movement : ' + movementDirection.movX);
+		// 	console.log('Y movement : ' + movementDirection.movY);
+		// }
 
 	    localStorage.setItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel', JSON.stringify(this.breakpoints));
 	    
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
-	    this.exercise = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
+	    this.exercise.breakpoints = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
 		// example call to retrieve data from a specific entry
 		// console.log(JSON.parse(retrievedObject)[0].x);
 
@@ -115,4 +113,6 @@ Exercise.prototype.saveRecord = function() {
 	    // Sorry! No Web Storage support..
 	    // Need some error handling here
 	}
+
+	this.startWatch();
 }
