@@ -36,7 +36,7 @@
 				$('.btn_stop').toggle();
 				
 				exercise.saveRecord();
-
+			
 				// $('.pages').hide();
 				// $('#page2').show();
 			});
