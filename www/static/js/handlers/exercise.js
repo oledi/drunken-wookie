@@ -84,6 +84,11 @@ Exercise.prototype.saveRecord = function() {
 		}
 		this.breakpoints[this.breakpoints.length - 1].duration = null;
 
+		for(var h = 0; h < this.breakpoints.length - 2; h++) {
+			console.log('Movement directions');
+			this.accelerometer.getMovementDirectionBetween(this.breakpoints[h], this.breakpoints[h+1]);
+		}
+
 	    localStorage.setItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel', JSON.stringify(this.breakpoints));
 	    
 	    // example of getting an exercise from the localstorage
@@ -95,5 +100,6 @@ Exercise.prototype.saveRecord = function() {
 		// this.buttons.saveRecordBtn.parentNode.removeChild(this.buttons.saveRecordBtn);
 	} else {
 	    // Sorry! No Web Storage support..
+	    // Need some error handling here
 	}
 }
