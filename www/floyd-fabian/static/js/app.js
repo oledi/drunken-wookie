@@ -11,7 +11,7 @@
         accelerometer: null
     }
 
-    var localStorage = { 
+    var storage = { 
 	    setExercises: function() {
 	   		if ('localStorage' in window && window['localStorage'] !== null || typeof(Storage) !== "undefined") {
               	try {
@@ -49,17 +49,17 @@
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
 
-			localStorage.setExercises();
+			storage.setExercises();
             controller.clickEvents();
 
 			navigator.splashscreen.hide();
 		}, clickEvents: function() {
         	$(".addExcersiceBtn").click(function() {
-        		localStorage.addExersice();
+        		storage.addExersice();
         	});
 
         	$(".deleteExcersis").click(function() {
-        		localStorage.cleanLocalstorage();
+        		storage.cleanLocalstorage();
         	});
 
         	$('.btn_start').click(function(){
