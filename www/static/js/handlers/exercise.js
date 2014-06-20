@@ -97,7 +97,6 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
  */
 Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
-	var maxValues = this.getMaxValuesBounds();
 	var previousPos = this.accelerometer.acceleration.previousPos;
 	var currentPos = this.accelerometer.acceleration.currentPos;
 	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);4
@@ -165,7 +164,7 @@ Exercise.prototype.saveRecord = function() {
 
 		// TEMP - clear the record interval
 		clearInterval(this.exerciseIntervals.recordExercise);
-		
+
 		// minus 2 to get the second last entry as last. Since that is the last entry that has a duration
 		for(var z = 0; z < this.breakpoints.length - 1; z++) {
 			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
@@ -179,12 +178,25 @@ Exercise.prototype.saveRecord = function() {
 		// 	console.log('X movement : ' + movementDirection.movX);
 		// 	console.log('Y movement : ' + movementDirection.movY);
 		// }
-		
-	    localStorage.setItem('oefening' + localStorage.length, JSON.stringify(this.breakpoints));
-	    
+
+		var oefeningObject = "oefening" + localStorage.length;
+              	
+		oefeningObject = { 'name': 'Test', 'url': "../../../floyd-fabian/img/squats.jpg" };
+		console.log (' LocalStorage size : ' + localStorage.length);
+		console.log("Setting new item on numner : " + localStorage.length);
+		localStorage.setItem(String("oefening" + localStorage.length), JSON.stringify(this.breakpoints));
+	    // console.log('Tester output: ' +  JSON.stringify(this.breakpoints));
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
-	    this.exercise.breakpoints = localStorage.getItem('oefening' + localStorage.length);
+	    this.exercise.breakpoints = localStorage.getItem(localStorage.key(localStorage.length -1));
+	    for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+		  console.log('Number : ' + i + " " + localStorage.getItem(localStorage.key(i)));
+		}
+		console.log("");
+	    console.log('test recovery : ' + JSON.parse(localStorage.getItem(localStorage.key(0))).name);
+
+		// console.log('Test retrieval localStorage : ' + localStorage.getItem(localStorage.key(0)));
+
 		// example call to retrieve data from a specific entry
 		// console.log(JSON.parse(retrievedObject)[0].x);
 
