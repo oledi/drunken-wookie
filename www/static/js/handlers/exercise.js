@@ -97,19 +97,10 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
  */
 Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
-<<<<<<< HEAD
 	var currentPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
 	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
 	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
 	
-	/* 
-		Check which direction the user should go from point A to point B
-		Check if the user isnt going another way (like up instead of sideways)
-		Check if the user isn't going past the mark (higher/lower)
-		Movement direction 
-	 */
-	if()
-=======
 	var maxValues = this.getMaxValuesBounds();
 	var previousPos = this.accelerometer.acceleration.previousPos;
 	var currentPos = this.accelerometer.acceleration.currentPos;
@@ -135,7 +126,6 @@ Exercise.prototype.checkIfInBounds = function() {
 				return false;
 			}
 		}
->>>>>>> origin/master
 
 		if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
 			// maxValues.y = nextBreakpoint.y;
