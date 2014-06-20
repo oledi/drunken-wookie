@@ -181,13 +181,15 @@ h3 {
 }
 
 #details section:nth-of-type(1) {
-    width: 94%;
+    width: 93.3%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
     margin: 0 auto;
 }
 
 #details section:nth-of-type(2),
 #details section:nth-of-type(3) {
-    width: 46%;
+    width: 37.3%;
+    padding: 0 4%;
     float: left;
     text-align: center;
     min-height: 8em;
@@ -195,7 +197,8 @@ h3 {
 
 #details section:nth-of-type(2) {
     background-color: rgba(255, 255, 255, 0.5);
-    margin: 0 1% 0 3%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 2% 1% 5% 3%;
 }
 
 #details section:nth-of-type(2) ul {
@@ -204,49 +207,61 @@ h3 {
 }
 #details section:nth-of-type(3) {
     background-color: rgba(90, 222, 255, 0.57);
-    margin: 0 3% 0 1%;
+    border: 1px solid rgba(90, 222, 255, 0.8);
+    margin: 2% 3% 5% 1%;
 }
 
 #details section:nth-of-type(4) {
     clear: both;
 }
 
-/*.btn_start {*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-    /*background: #59ae9f;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 100px;*/
-    /*border-radius: 100px;*/
-/*}*/
+#details section:nth-of-type(4) a {
+    color: rgb(255, 165, 82);
+    background-color: rgba(255, 165, 82, 0.59);
+    text-decoration: none;
+    padding: 0.6em;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 36%;
+}
 
-/*.btn_start h1 {*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*font-size: 30px;*/
-    /*margin-top: 80px;*/
-    /*float: left;*/
-    /*width: 100%;*/
-/*}*/
+.btn_start {
+    width: 200px;
+    height: 200px;
+    background: #59ae9f;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 100px;
+}
 
-/*.btn_stop {*/
-    /*display: none;*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-    /*background: red;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 100px;*/
-    /*border-radius: 100px;*/
-/*}*/
+.btn_start h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 80px;
+    float: left;
+    width: 100%;
+}
 
-/*.btn_stop h1 {*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*font-size: 30px;*/
-    /*margin-top: 80px;*/
-    /*float: left;*/
-    /*width: 100%;*/
-/*}*/
+.btn_stop {
+    display: none;
+    width: 200px;
+    height: 200px;
+    background: red;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius: 100px;
+}
+
+.btn_stop h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 80px;
+    float: left;
+    width: 100%;
+}
 
 @font-face {
     font-family: 'museo300';
