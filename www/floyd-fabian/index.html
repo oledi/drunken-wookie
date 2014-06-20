@@ -8,36 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
-<<<<<<< HEAD
-<script>
-	 function voegToe(){
- 	
- 			try {
-              	for( var i = 0; i<localStorage.length; i++){
-              		console.log(i);
-              	
-            }
-              	
-              	var oefeningObject = "oefening" + localStorage.length;
-              	console.log(oefeningObject);
-		     	oefeningObject = { 'name': 'Squats', 'url': "squats.jpg" };
-		        localStorage.setItem("oefening" + i, JSON.stringify(oefeningObject));
-		        
-		       
-              	
-		   } catch (e) {
-			        console.log(e);
-		  }
-   		
-	  }
-	  
-	  function deleteOefeningen(){
-	  	localStorage.clear();
-	 }
-	
-</script>
-	<!-- <script src='cordova.js'></script> -->
-=======
+    <script src='cordova.js'></script>
     <script type="text/javascript" src="static/js/jquery.js"></script>
     <!-- app logic -->
     <script src="../static/js/handlers/exercise.js"></script>
@@ -45,14 +16,10 @@
 
     <!-- main app -->
     <script src="static/js/app.js"></script>
-
-    <script src='cordova.js'></script>
->>>>>>> FETCH_HEAD
 </head>
 <body>
 <div id="page1" class="pages">
-<<<<<<< HEAD
-	<button onclick="voegToe()">Voeg toe</button><button onclick="deleteOefeningen()">Delete</button>
+	<button class="addExcersiceBtn">Voeg toe</button><button onclick="deleteOefeningen()">Delete</button>
 	<div id="bgcontainer_menu">
 		<div id="container_menu">
 			<h1>FysioN</h1> 
@@ -68,9 +35,6 @@
 		</div>
 	</div>
 </div>	
-=======
->>>>>>> FETCH_HEAD
-
     <div id="bgcontainer_menu">
         <div id="container_menu">
             <h1>FysioN</h1>

@@ -7,6 +7,37 @@
         accelerometer: null
     }
 
+    var localStorage = { 
+	    setExercises: function() {
+	   		if ('localStorage' in window && window['localStorage'] !== null) {
+	   		 	try {
+	              	for( var i = 0; i<localStorage.length; i++){
+	              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
+	           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
+	              	}
+				} catch (e) {
+				    console.log(e);
+				}
+		    } else {
+		       console.log('heb ik niet');
+		    } 
+		}, addExersice: function() {
+			try {
+              	for( var i = 0; i<localStorage.length; i++){
+              		console.log(i);
+                }
+              	var oefeningObject = "oefening" + localStorage.length;
+              	console.log(oefeningObject);
+		     	oefeningObject = { 'name': 'Squats', 'url': "squats.jpg" };
+		        localStorage.setItem("oefening" + i, JSON.stringify(oefeningObject));
+            } catch (e) {
+                console.log(e);
+            }
+		}, cleanLocalstorage: function() {
+			localStorage.clear();
+		}
+	}
+
 	var controller = {
 		init: function () {
             sensors.accelerometer = new Accelerometer();
@@ -24,6 +55,10 @@
 				}
 			}, 500);
         }, clickEvents: function() {
+        	$(".addExcersiceBtn").click(function() {
+        		localStorage.addExersice();
+        	});
+
         	$('.btn_start').click(function(){
 			   	$('.btn_start').toggle();
 				$('.btn_stop').toggle();
