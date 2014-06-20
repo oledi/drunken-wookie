@@ -45,12 +45,11 @@
 
 	var controller = {
 		init: function () {
-			console.log('init');
 			$('#page1').show();
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
 
-			localStorage2.setExercises();
+			localStorage.setExercises();
             controller.clickEvents();
 
 			navigator.splashscreen.hide();
