@@ -40,6 +40,14 @@ Exercise.prototype.startWatch = function() {
 	}, 500);
 }
 
+Exercise.prototype.vibrate = function(miliseconds) {
+	navigator.notification.vibrate(milliseconds)
+}
+
+Exercise.prototype.beep = function(times) {
+	navigator.notification.beep(times);
+}
+
 Exercise.prototype.setTimeoutNextBreakpoint = function() {
 	var self = this;
 
