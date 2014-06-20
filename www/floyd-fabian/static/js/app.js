@@ -13,7 +13,7 @@
 
     var localStorage = { 
 	    setExercises: function() {
-	   		if ('localStorage' in window && window['localStorage'] !== null) {
+	   		if ('localStorage' in window && window['localStorage'] !== null || typeof(Storage) !== "undefined") {
               	try {
 	              	for( var i = 0; i<localStorage.length; i++){
 	              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
