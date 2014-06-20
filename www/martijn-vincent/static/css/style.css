@@ -7,7 +7,9 @@ body {
     width: 100%;
     overflow:hidden;
     font-size: 1em;
-    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) repeat-y;
+    background-image: url('achtergrond.jpg');
+    background-repeat:repeat-y;
+    z-index: 999;
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -171,8 +173,43 @@ h3 {
     padding: 0;
 }
 
+/* Exercise detail */
 
+#details {
+    margin-top: 75px;
+    color: #ffffff;
+}
 
+#details section:nth-of-type(1) {
+    width: 94%;
+    margin: 0 auto;
+}
+
+#details section:nth-of-type(2),
+#details section:nth-of-type(3) {
+    width: 46%;
+    float: left;
+    text-align: center;
+    min-height: 8em;
+}
+
+#details section:nth-of-type(2) {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 1% 0 3%;
+}
+
+#details section:nth-of-type(2) ul {
+    list-style: none;
+    padding: 0;
+}
+#details section:nth-of-type(3) {
+    background-color: rgba(90, 222, 255, 0.57);
+    margin: 0 3% 0 1%;
+}
+
+#details section:nth-of-type(4) {
+    clear: both;
+}
 
 /*.btn_start {*/
     /*width: 200px;*/
