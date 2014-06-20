@@ -1,19 +1,9 @@
 /* www/index.html stylesheet */
 body {
-    margin: 1em auto;
-    padding: 2em;
+    width: 100%;
+    margin: 0;
     text-align: center;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 36em;
-    border: 1px solid #ccc;
-    transition: border 0.5s ease, border-radius 0.5s ease, box-shadow 0.5s ease;
-}
-
-body:hover {
-    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,.275);
-    box-shadow: inset 0 0 10px rgba(0,0,0,.275);
-    border: 1px solid rgba(0,0,0,.275);
-    border-radius: 5px;
 }
 
 p {
@@ -25,6 +15,8 @@ p {
 ul {
     display: inline-block;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 li  {
@@ -34,17 +26,15 @@ li  {
 
 .button {
     display: block;
-    margin: 1em;
     padding: 1em;
-    margin-bottom: 0;
+    margin: 1em 1em 0;
     font-weight: 400;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
     text-decoration: none;
-    background-image: none;
     color: #333;
-    background-color: #fff;
+    background: #fff none;
     border: 1px solid #ccc;
     white-space: nowrap;
     font-size: 14px;
@@ -66,10 +56,9 @@ li  {
 }
 .button:active {
     color: #333;
-    background-color: #ebebeb;
     border-color: #adadad;
     outline: 0;
-    background-image: none;
+    background: #ebebeb none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
     box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }

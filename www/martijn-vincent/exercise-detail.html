@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Your New Application</title>
+    <!-- Meta info -->
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="author" content="Vincent van Dijck">
+
+    <!-- Page Title -->
+    <title>FysioApp</title>
 
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
+    <script src='cordova.js'></script>
     <script type="text/javascript" src="static/js/jquery.js"></script>
 
     <!-- App logic -->
@@ -20,35 +24,35 @@
     <!-- Main app -->
     <script src="static/js/app.js"></script>
 
-    <script src='cordova.js'></script>
 </head>
 <body>
-<section>
-    <a href="exercises.html">Terug</a>
+<section class="title-bar">
+    <a href="exercises-arms.html"><img src="../martijn-vincent/static/img/icons/icon_arrow_left.png" alt="arrow-left"/>Terug</a>
 
     <h1>Uitleg</h1>
 
     <h2>Been strek</h2>
 </section>
-<section>
+<section id="details">
     <section>
-        <iframe width="300" height="345" src="https://www.youtube.com/watch?v=rgMj90oyBao"></iframe>
+        <iframe width="298" height="166" src="../martijn-vincent/static/video/Exercise_Clip.mp4" frameborder="0" allowfullscreen></iframe>
     </section>
     <section>
-        <h3>Benodigdheden</h3>
+        <h3>Materiaal</h3>
         <ul>
-            <li>Ding 1</li>
-            <li>Ding 2</li>
-            <li>Ding 3</li>
+            <li>Elastische band</li>
+            <li>Gewichten (4Kg)</li>
+            <li>Balance Board</li>
         </ul>
     </section>
     <section>
         <h3>Advies</h3>
 
-        <p>3x - 30 seconden</p>
+        <p>2x per dag:</p>
+        <p>3x - 60 sec.</p>
     </section>
     <section>
-        <a href="">Begin Oefening</a>
+        <a href="during-exercise.html">Begin oefening</a>
     </section>
 </section>
 </body>

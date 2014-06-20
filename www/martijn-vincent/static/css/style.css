@@ -1,3 +1,12 @@
+/* Stylesheet for FysioApp
+*
+* Author: Vincent van Dijck
+* Version: 0.5
+*
+* All rights reserved.
+*/
+
+
 /* General styles */
 body {
     margin: 0;
@@ -7,7 +16,9 @@ body {
     width: 100%;
     overflow:hidden;
     font-size: 1em;
-    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) repeat-y;
+    background-image: url('achtergrond.jpg');
+    background-repeat:repeat-y;
+    z-index: 999;
     font-family: 'Oxygen', sans-serif;
 }
 
@@ -90,39 +101,38 @@ h3 {
     box-shadow: 0 0 15px #ffffff;
 }
 
-#categories a:nth-of-type(1),
-#categories a:nth-of-type(2) {
-    width: 60px;
-    height: 40px;
-}
-
-#categories a:nth-of-type(3),
-#categories a:nth-of-type(4) {
-    width: 52px;
-    height: 41px;
-}
-
 #categories a:nth-of-type(1) {
-    top: 190px;
-    left: 20px;
+    width: 77px;
+    height: 23px;
+    top: 132px;
+    left: 50px;
 }
-
 #categories a:nth-of-type(2) {
+    width: 50px;
+    height: 22px;
     top: 190px;
     left: 220px;
 }
-
 #categories a:nth-of-type(3) {
-    top: 420px;
-    left: 80px;
+    width: 48px;
+    height: 23px;
+    top: 368px;
+    left: 90px;
 }
-
 #categories a:nth-of-type(4) {
+    width: 47px;
+    height: 23px;
     top: 420px;
-    left: 160px;
+    left: 173px;
+}
+#categories a:nth-of-type(5) {
+    width: 48px;
+    height: 23px;
+    top: 470px;
+    left: 93px;
 }
 
-/* Exercises.html */
+/* exercises.html */
 #list {
     margin-top: 65px;
     display: inline-block;
@@ -171,46 +181,120 @@ h3 {
     padding: 0;
 }
 
+/* exercise-detail.html */
+#details {
+    margin-top: 75px;
+    color: #ffffff;
+}
 
+#details section h3 {
+    margin: 0.6em 0;
+    font-family: museo700;
+}
 
+#details section:nth-of-type(1) {
+    width: 93.3%;
+    height: 166px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 0 auto;
+}
 
-/*.btn_start {*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-    /*background: #59ae9f;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 100px;*/
-    /*border-radius: 100px;*/
-/*}*/
+#details section:nth-of-type(2),
+#details section:nth-of-type(3) {
+    width: 37.3%;
+    padding: 0 4%;
+    float: left;
+    text-align: center;
+    min-height: 8em;
+}
 
-/*.btn_start h1 {*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*font-size: 30px;*/
-    /*margin-top: 80px;*/
-    /*float: left;*/
-    /*width: 100%;*/
-/*}*/
+#details section:nth-of-type(2) {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 2% 1% 8% 3%;
+}
 
-/*.btn_stop {*/
-    /*display: none;*/
-    /*width: 200px;*/
-    /*height: 200px;*/
-    /*background: red;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 100px;*/
-    /*border-radius: 100px;*/
-/*}*/
+#details section:nth-of-type(2) ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-/*.btn_stop h1 {*/
-    /*text-align: center;*/
-    /*color: #fff;*/
-    /*font-size: 30px;*/
-    /*margin-top: 80px;*/
-    /*float: left;*/
-    /*width: 100%;*/
-/*}*/
+#details section:nth-of-type(3) {
+    background-color: rgba(90, 222, 255, 0.57);
+    border: 1px solid rgba(90, 222, 255, 0.8);
+    margin: 2% 3% 8% 1%;
+}
 
+#details section:nth-of-type(4) {
+    clear: both;
+}
+
+#details section:nth-of-type(4) a {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 169, 60, 0.59);
+    border: 1px solid rgba(255, 165, 82, 0.8);
+    text-decoration: none;
+    padding: 0.6em;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 36%;
+}
+
+/* during-exercise.html */
+#buttons {
+    margin-top: 100px;
+}
+
+/* instruction text*/
+.btn_start p,
+.btn_stop p {
+    text-align: center;
+    color: #fff;
+    margin-top: 60px;
+    float: left;
+    width: 100%;
+}
+
+/* start button */
+.btn_start {
+    width: 150px;
+    height: 150px;
+    background: #59ae9f;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.btn_start h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 60px;
+    float: left;
+    width: 100%;
+}
+
+/* stop button */
+.btn_stop {
+    display: none;
+    width: 150px;
+    height: 150px;
+    background: #e53a3a;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+
+.btn_stop h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 60px;
+    float: left;
+    width: 100%;
+}
+
+/* Fonts used */
 @font-face {
     font-family: 'museo300';
     src: url('fonts/museo-300-webfont.eot');
