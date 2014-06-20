@@ -1,6 +1,9 @@
 (function () {
 	'use strict';
 
+	/**
+	* Test
+	*/
 	var exercise = null;
 
     var sensors = {
