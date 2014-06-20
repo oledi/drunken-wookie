@@ -184,7 +184,7 @@ Exercise.prototype.saveRecord = function() {
 	    
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
-	    this.exercise.breakpoints = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
+	    this.exercise.breakpoints = localStorage.getItem('oefening' + localStorage.length);
 		// example call to retrieve data from a specific entry
 		// console.log(JSON.parse(retrievedObject)[0].x);
 
