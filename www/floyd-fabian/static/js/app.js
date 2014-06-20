@@ -1,4 +1,4 @@
-$(document).ready(function(){
+(function () {
 	'use strict';
 
 	/**
@@ -14,18 +14,17 @@ $(document).ready(function(){
     var localStorage2 = { 
 	    setExercises: function() {
 	   		if ('localStorage' in window && window['localStorage'] !== null) {
-              try {
-              	for( var i = 0; i<localStorage.length; i++){
-              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
-           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="static/img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
-              	}
-              
+              	try {
+	              	for( var i = 0; i<localStorage.length; i++){
+	              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
+	           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="static/img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
+	              	}
 			    } catch (e) {
 			        console.log(e);
-			  }
-	    } else {
-	       console.log('heb ik niet');
-	    } 
+			  	}
+	    	} else {
+	       		console.log('heb ik niet');
+	    	}
 		}, addExersice: function() {
 			try {
 				console.log('ja');
@@ -46,24 +45,16 @@ $(document).ready(function(){
 
 	var controller = {
 		init: function () {
+			console.log('init');
 			$('#page1').show();
-		
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
+
 			localStorage2.setExercises();
             controller.clickEvents();
+
 			navigator.splashscreen.hide();
-			
-		}, update: function() {
-
-			setInterval(function() {
-				if(sensors.accelerometer.breakpoint) {
-
-
-					sensors.accelerometer.breakpoint = false;
-				}
-			}, 500);
-        }, clickEvents: function() {
+		}, clickEvents: function() {
         	$(".addExcersiceBtn").click(function() {
         		localStorage2.addExersice();
         	});
@@ -122,7 +113,4 @@ $(document).ready(function(){
 	};
 
 	document.addEventListener("deviceready", controller.init, false);
-	
-	
-	
-});
+})();
