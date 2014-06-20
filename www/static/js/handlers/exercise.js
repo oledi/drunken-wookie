@@ -58,18 +58,30 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
 Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
 	var maxValues = this.getMaxValuesBounds();
-	var previousPos = this.acceleration.previousPos;
-	var currentPos = this.acceleration.currentPos;
-	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);
+	var previousPos = this.accelerometer.acceleration.previousPos;
+	var currentPos = this.accelerometer.acceleration.currentPos;
+	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);4
+
+	/* Breakpoint values */
+	var currentBreakpoint = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
+	var nextBreakpoint = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
+	var directionBreakpoints = this.accelerometer.getMovementDirectionBetween(currentBreakpoint, nextBreakpoint);
 	
-	if(currentDirection.movX != maxValues.movementDirection.movX || 
-		currentDirection.movY != maxValues.movementDirection.movY) {
+	
+	if(currentDirection.movX != directionBreakpoints.movX || 
+		currentDirection.movY != directionBreakpoints.movY) {
 		return false;
 	}else { 
-		if(currentDirection == this.accelerometer.movementDirections.right) {
+		if(directionBreakpoints.movX == this.accelerometer.movementDirections.right) {
+			// maxValues.x = nextBreakpoint.x;
+		}else if(directionBreakpoints.movX == this.accelerometer.movementDirections.left) {
+			// maxValues.x = currentBreakpoint.x;
+		}
 
-		}else if(currentDirection == this.accelerometer.movementDirections.left) {
-
+		if(directionBreakpoints.movY == this.accelerometer.movementDirections.up) {
+			// maxValues.y = currentBreakpoint.y;
+		}else if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
+			// maxValues.y = nextBreakpoint.y;
 		}
 	}
 	
@@ -79,23 +91,20 @@ Exercise.prototype.checkIfInBounds = function() {
 }
 
 Exercise.prototype.getMaxValuesBounds = function() {
-	var currentPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
-	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
-	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
 	var maxValues = {
-		movementDirection: currentDirection
+		movementDirection: directionBreakpoints
 	};
 	
 	//Shit is going to the right
-	if(currentDirection.movX == this.accelerometer.movementDirections.right) {
+	if(directionBreakpoints.movX == this.accelerometer.movementDirections.right) {
 		maxValues.x = nextPos.x;
-	}else if(currentDirection.movX == this.accelerometer.movementDirections.left) {
+	}else if(directionBreakpoints.movX == this.accelerometer.movementDirections.left) {
 		maxValues.x = currentPos.x;
 	}
 
-	if(currentDirection.movY == this.accelerometer.movementDirections.up) {
+	if(directionBreakpoints.movY == this.accelerometer.movementDirections.up) {
 		maxValues.y = currentPos.y;
-	}else if(currentDirection.movY == this.accelerometer.movementDirections.down) {
+	}else if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
 		maxValues.y = nextPos.y;
 	}
 
