@@ -12,12 +12,39 @@
 	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript" src="../static/js/handlers/accelerometer.js"></script>
 
-
-	<script src='cordova.js'></script>
+<script>
+	 function voegToe(){
+ 	
+ 			try {
+              	for( var i = 0; i<localStorage.length; i++){
+              		console.log(i);
+              	
+            }
+              	
+              	var oefeningObject = "oefening" + localStorage.length;
+              	console.log(oefeningObject);
+		     	oefeningObject = { 'name': 'Squats', 'url': "squats.jpg" };
+		        localStorage.setItem("oefening" + i, JSON.stringify(oefeningObject));
+		        
+		       
+              	
+		   } catch (e) {
+			        console.log(e);
+		  }
+   		
+	  }
+	  
+	  function deleteOefeningen(){
+	  	localStorage.clear();
+	 }
+	
+</script>
+	<!-- <script src='cordova.js'></script> -->
 </head>
 <body>
 
 <div id="page1" class="pages">
+	<button onclick="voegToe()">Voeg toe</button><button onclick="deleteOefeningen()">Delete</button>
 	<div id="bgcontainer_menu">
 		<div id="container_menu">
 			<h1>FysioN</h1> 
@@ -29,22 +56,7 @@
 
 	<div id="bgcontainer_oefeningen">
 		<div id="container_oefeningen"> 
-			<a href="#" name=""><div class="container_item">
-				<img src="img/biceps.jpg" />
-				<h1>BICEPS CURL</h1>
-			</div></a>
-			<a href="#" name="page2_wijn2"><div class="container_item">
-				<img src="img/squats.jpg" />
-				<h1>SQUATS</h1>
-			</div></a>
-			<a href="#" name="page2_wijn3"><div class="container_item">
-				<img src="img/legextension.jpg" />
-				<h1>LEG EXTENSION</h1>
-			</div></a>
-			<a href="#" name="page2_wijn4"><div class="container_item">
-				<img src="img/deadlift.jpg" />
-				<h1>DEADLIFT</h1>
-			</div></a>
+			
 		</div>
 	</div>
 </div>	

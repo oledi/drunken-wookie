@@ -1,6 +1,27 @@
 $(document).ready(function(){
 	
 	
+	function setExercises() {
+   		 if ('localStorage' in window && window['localStorage'] !== null) {
+              try {
+              	for( var i = 0; i<localStorage.length; i++){
+              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
+           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
+              	}
+              
+			    } catch (e) {
+			        console.log(e);
+			  }
+	    } else {
+	       console.log('heb ik niet');
+	    } 
+   
+	}
+	
+	setExercises();
+	
+	
+
 	// Start en stop functie
 	
 	 $('.btn_start').click(function(){
