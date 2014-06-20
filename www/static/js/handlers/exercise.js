@@ -34,7 +34,7 @@ Exercise.prototype.startRecord = function() {
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
-	}, 50);
+	}, 100);
 }
 
 /**
@@ -44,13 +44,14 @@ Exercise.prototype.startRecord = function() {
 Exercise.prototype.startWatch = function() {
 	var self = this;
 	self.setTimeoutNextBreakpoint();
-
+	console.log('Starting watch');
 	self.exerciseIntervals.watchExercise = setInterval(function() {
+		console.log("I'm Batman!");
 		var inBounds = self.checkIfInBounds();
 		if(!inBounds) {
 			console.log('Not in bounds / Should be shaking atm');
 		}
-	}, 500);
+	}, 100);
 }
 
 /** 
@@ -101,15 +102,14 @@ Exercise.prototype.checkIfInBounds = function() {
 	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
 	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
 	
-	var maxValues = this.getMaxValuesBounds();
 	var previousPos = this.accelerometer.acceleration.previousPos;
-	var currentPos = this.accelerometer.acceleration.currentPos;
-	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);4
+	var currentPos = this.accelerometer.acceleration;
+	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);
 
 	/* Breakpoint values */
 	var currentBreakpoint = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
 	var nextBreakpoint = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
-	var directionBreakpoints = this.accelerometer.getMovementDirectionBetween(currentBreakpoint, nextBreakpoint);
+ 	var directionBreakpoints = this.accelerometer.getMovementDirectionBetween(currentBreakpoint, nextBreakpoint);
 	
 	if(currentDirection.movX != directionBreakpoints.movX || 
 		currentDirection.movY != directionBreakpoints.movY) {
@@ -184,22 +184,19 @@ Exercise.prototype.saveRecord = function() {
 		// 	console.log('Y movement : ' + movementDirection.movY);
 		// }
 
-		var oefeningObject = "oefening" + localStorage.length;
-              	
-		oefeningObject = { 'name': 'Test', 'url': "../../../floyd-fabian/img/squats.jpg" };
-		console.log (' LocalStorage size : ' + localStorage.length);
-		console.log("Setting new item on numner : " + localStorage.length);
 		localStorage.setItem(String("oefening" + localStorage.length), JSON.stringify(this.breakpoints));
 	    // console.log('Tester output: ' +  JSON.stringify(this.breakpoints));
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
 	    this.exercise.breakpoints = localStorage.getItem(localStorage.key(localStorage.length -1));
-	    for ( var i = 0, len = localStorage.length; i < len; ++i ) {
-		  console.log('Number : ' + i + " " + localStorage.getItem(localStorage.key(i)));
-		}
-		console.log("");
-	    console.log('test recovery : ' + JSON.parse(localStorage.getItem(localStorage.key(0))).name);
-
+	    //for ( var i = 0, len = localStorage.length; i < len; ++i ) {
+		//  console.log('Number : ' + i + " " + localStorage.getItem(localStorage.key(i)));
+		//}
+		//console.log("");
+		//console.log(String('oefening' + (localStorage.length - 1)));
+	    // console.log('test recovery : ' + JSON.parse(localStorage.getItem(localStorage.key(0))).name);
+	    //console.log(name);
+	    //console.log('test recovery : ' + JSON.parse(localStorage.getItem('oefening' + (localStorage.length - 1))));
 		// console.log('Test retrieval localStorage : ' + localStorage.getItem(localStorage.key(0)));
 
 		// example call to retrieve data from a specific entry
