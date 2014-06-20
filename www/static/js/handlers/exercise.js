@@ -66,7 +66,11 @@ Exercise.prototype.checkIfInBounds = function() {
 		currentDirection.movY != maxValues.movementDirection.movY) {
 		return false;
 	}else { 
+		if(currentDirection == this.accelerometer.movementDirections.right) {
 
+		}else if(currentDirection == this.accelerometer.movementDirections.left) {
+
+		}
 	}
 	
 	
