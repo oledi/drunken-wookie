@@ -1,36 +1,39 @@
-(function () {
+$(document).ready(function(){
 	'use strict';
 
 	/**
 	* Test
 	*/
 	var exercise = null;
+	
 
     var sensors = {
         accelerometer: null
     }
 
-    var localStorage = { 
+    var localStorage2 = { 
 	    setExercises: function() {
 	   		if ('localStorage' in window && window['localStorage'] !== null) {
-	   		 	try {
-	              	for( var i = 0; i<localStorage.length; i++){
-	              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
-	           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
-	              	}
-				} catch (e) {
-				    console.log(e);
-				}
-		    } else {
-		       console.log('heb ik niet');
-		    } 
+              try {
+              	for( var i = 0; i<localStorage.length; i++){
+              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
+           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="static/img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
+              	}
+              
+			    } catch (e) {
+			        console.log(e);
+			  }
+	    } else {
+	       console.log('heb ik niet');
+	    } 
 		}, addExersice: function() {
 			try {
+				console.log('ja');
               	for( var i = 0; i<localStorage.length; i++){
-              		console.log(i);
                 }
+                
               	var oefeningObject = "oefening" + localStorage.length;
-              	console.log(oefeningObject);
+              	
 		     	oefeningObject = { 'name': 'Squats', 'url': "squats.jpg" };
 		        localStorage.setItem("oefening" + i, JSON.stringify(oefeningObject));
             } catch (e) {
@@ -43,11 +46,14 @@
 
 	var controller = {
 		init: function () {
+			$('#page1').show();
+		
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
-
+			localStorage2.setExercises();
             controller.clickEvents();
 			navigator.splashscreen.hide();
+			
 		}, update: function() {
 
 			setInterval(function() {
@@ -59,7 +65,7 @@
 			}, 500);
         }, clickEvents: function() {
         	$(".addExcersiceBtn").click(function() {
-        		localStorage.addExersice();
+        		localStorage2.addExersice();
         	});
 
         	$('.btn_start').click(function(){
@@ -116,4 +122,7 @@
 	};
 
 	document.addEventListener("deviceready", controller.init, false);
-})();
+	
+	
+	
+});
