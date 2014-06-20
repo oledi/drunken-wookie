@@ -67,26 +67,35 @@ Exercise.prototype.checkIfInBounds = function() {
 	var nextBreakpoint = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
 	var directionBreakpoints = this.accelerometer.getMovementDirectionBetween(currentBreakpoint, nextBreakpoint);
 	
-	
 	if(currentDirection.movX != directionBreakpoints.movX || 
 		currentDirection.movY != directionBreakpoints.movY) {
 		return false;
 	}else { 
 		if(directionBreakpoints.movX == this.accelerometer.movementDirections.right) {
 			// maxValues.x = nextBreakpoint.x;
+			if(currentPos > nextBreakpoint.x + this.accelerometer.options.movementSensitivity) {
+				return false;
+			}
 		}else if(directionBreakpoints.movX == this.accelerometer.movementDirections.left) {
 			// maxValues.x = currentBreakpoint.x;
+			if(currentPos < currentBreakpoint.x  - this.accelerometer.acceleration.movementSensitivity) {
+				return false;
+			}
 		}
 
-		if(directionBreakpoints.movY == this.accelerometer.movementDirections.up) {
-			// maxValues.y = currentBreakpoint.y;
-		}else if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
+		if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
 			// maxValues.y = nextBreakpoint.y;
+			if(currentPos.y > nextBreakpoint.y + this.accelerometer.acceleration.movementSensitivity) {
+				return false;
+			}
+		}else if(directionBreakpoints.movY == this.accelerometer.movementDirections.up) {
+			// maxValues.y = currentBreakpoint.y;
+			if(currentPos.y < nextBreakpoint - this.accelerometer.acceleration.movementSensitivity) {
+				return false;
+			}
 		}
 	}
 	
-	
-
 	return inBounds;
 }
 
@@ -142,8 +151,8 @@ Exercise.prototype.saveRecord = function() {
 		// 	console.log('X movement : ' + movementDirection.movX);
 		// 	console.log('Y movement : ' + movementDirection.movY);
 		// }
-
-	    localStorage.setItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel', JSON.stringify(this.breakpoints));
+		
+	    localStorage.setItem('oefening' + localStorage.length, JSON.stringify(this.breakpoints));
 	    
 	    // example of getting an exercise from the localstorage
 	    // var retrievedObject = localStorage.getItem(/*this.buttons.inputExerciseName.value*/ 'Aardappel');
