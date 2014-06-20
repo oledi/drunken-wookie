@@ -67,7 +67,6 @@ Exercise.prototype.checkIfInBounds = function() {
 		return false;
 	}else { 
 
-
 	}
 	
 	
@@ -84,15 +83,15 @@ Exercise.prototype.getMaxValuesBounds = function() {
 	};
 	
 	//Shit is going to the right
-	if(currentDirection == this.accelerometer.movementDirections.right) {
+	if(currentDirection.movX == this.accelerometer.movementDirections.right) {
 		maxValues.x = nextPos.x;
-	}else if(currentDirection == this.accelerometer.movementDirections.left) {
+	}else if(currentDirection.movX == this.accelerometer.movementDirections.left) {
 		maxValues.x = currentPos.x;
 	}
 
-	if(currentDirection == this.accelerometer.movementDirections.up) {
+	if(currentDirection.movY == this.accelerometer.movementDirections.up) {
 		maxValues.y = currentPos.y;
-	}else if(currentDirection == this.accelerometer.movementDirections.down) {
+	}else if(currentDirection.movY == this.accelerometer.movementDirections.down) {
 		maxValues.y = nextPos.y;
 	}
 
