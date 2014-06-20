@@ -34,7 +34,7 @@ Exercise.prototype.startRecord = function() {
 			self.breakpoints.push(coordinates);
 			self.accelerometer.breakpoint = false;
 		}
-	}, 100);
+	}, 500);
 }
 
 /**
@@ -51,7 +51,7 @@ Exercise.prototype.startWatch = function() {
 		if(!inBounds) {
 			console.log('Not in bounds / Should be shaking atm');
 		}
-	}, 100);
+	}, 500);
 }
 
 /** 
@@ -173,6 +173,7 @@ Exercise.prototype.saveRecord = function() {
 		// minus 2 to get the second last entry as last. Since that is the last entry that has a duration
 		for(var z = 0; z < this.breakpoints.length - 1; z++) {
 			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
+			console.log(this.breakpoints[z].duration);
 		}
 		this.breakpoints[this.breakpoints.length - 1].duration = null;
 

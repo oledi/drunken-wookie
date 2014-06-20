@@ -16,9 +16,11 @@
 	   		if ('localStorage' in window && window['localStorage'] !== null || typeof(Storage) !== "undefined") {
               	try {
 	              	for( var i = 0; i<localStorage.length; i++){
-	              		var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
-	           		   $("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="static/img/'+retrievedObject.url+'" /><h1>'+retrievedObject.name+'</h1></div></a>'); 
-	              	}
+                        var retrievedObject = JSON.parse(localStorage.getItem('oefening'+i));
+                        var name = JSON.parse(localStorage.getItem(localStorage.key(i))).name;
+                        var url = JSON.parse(localStorage.getItem(localStorage.key(i))).url;
+						$("#container_oefeningen").append('<a href="#" name=""><div class="container_item"><img src="static/img/'+url+'" />"<h1>'+name+'</h1></div></a>'); 
+                	}	
 			    } catch (e) {
 			        console.log(e);
 			  	}
@@ -26,11 +28,7 @@
 	       		console.log('heb ik niet');
 	    	}
 		}, addExersice: function() {
-			try {
-				console.log('ja');
-              	for( var i = 0; i<localStorage.length; i++){
-                }
-                
+			try {              
               	var oefeningObject = "oefening" + localStorage.length;
               	
 		     	oefeningObject = { 'name': 'Squats', 'url': "squats.jpg" };
@@ -112,6 +110,41 @@
 					 
 			    return false;
 			});
+
+			$('#page3 .btn_stop').click(function(){
+			   	$('.btn_start').toggle();
+				$('.btn_stop').toggle();
+					 
+				$('.pages').hide();
+				$('#page2').show();
+				
+				stop();
+			});
+
+			$('#page4 .btn_stop').click(function(){
+			   	$('.btn_start').toggle();
+				$('.btn_stop').toggle();
+					 
+				$('.pages').hide();
+				$('#page1').show();
+				
+				stop();
+			});
+
+			$('#page2 #bgcontainer_menu').click(function(){
+			   	$('.pages').hide();
+				$('#page1').show();
+					 
+			    return false;
+			});
+
+			$('#page4 #bgcontainer_menu').click(function(){
+			   	$('.pages').hide();
+				$('#page1').show();
+					 
+			    return false;
+			});
+
         }
 	};
 
