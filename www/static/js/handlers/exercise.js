@@ -33,10 +33,9 @@ Exercise.prototype.startWatch = function() {
 	self.setTimeoutNextBreakpoint();
 
 	self.exerciseIntervals.watchExercise = setInterval(function() {
-		console.log('hurr-duur-durr?');
 		var inBounds = self.checkIfInBounds();
-		if(inBounds) {
-
+		if(!inBounds) {
+			console.log('Not in bounds / Should be shaking atm');
 		}
 	}, 500);
 }
@@ -99,27 +98,6 @@ Exercise.prototype.checkIfInBounds = function() {
 	return inBounds;
 }
 
-Exercise.prototype.getMaxValuesBounds = function() {
-	var maxValues = {
-		movementDirection: directionBreakpoints
-	};
-	
-	//Shit is going to the right
-	if(directionBreakpoints.movX == this.accelerometer.movementDirections.right) {
-		maxValues.x = nextPos.x;
-	}else if(directionBreakpoints.movX == this.accelerometer.movementDirections.left) {
-		maxValues.x = currentPos.x;
-	}
-
-	if(directionBreakpoints.movY == this.accelerometer.movementDirections.up) {
-		maxValues.y = currentPos.y;
-	}else if(directionBreakpoints.movY == this.accelerometer.movementDirections.down) {
-		maxValues.y = nextPos.y;
-	}
-
-	return maxValues;
-}
-
 Exercise.prototype.endRecord = function() {
 	clearInterval(this.exerciseIntervals.recordExercise);
 
@@ -162,10 +140,8 @@ Exercise.prototype.saveRecord = function() {
 
 	 	// this.buttons.inputExerciseName.parentNode.removeChild(this.buttons.inputExerciseName);
 		// this.buttons.saveRecordBtn.parentNode.removeChild(this.buttons.saveRecordBtn);
-	} else {
-	    // Sorry! No Web Storage support..
-	    // Need some error handling here
-	}
+	} 
 
+	// NEEDS TO BE REMOVED WHEN WE HAZ BUTTONS WORKING
 	this.startWatch();
 }
