@@ -1,3 +1,12 @@
+/* Stylesheet for FysioApp
+*
+* Author: Vincent van Dijck
+* Version: 0.5
+*
+* All rights reserved.
+*/
+
+
 /* General styles */
 body {
     margin: 0;
@@ -263,6 +272,7 @@ h3 {
     width: 100%;
 }
 
+/* Fonts used */
 @font-face {
     font-family: 'museo300';
     src: url('fonts/museo-300-webfont.eot');
