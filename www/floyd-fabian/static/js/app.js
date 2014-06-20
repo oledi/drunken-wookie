@@ -11,7 +11,7 @@
         accelerometer: null
     }
 
-    var localStorage2 = { 
+    var localStorage = { 
 	    setExercises: function() {
 	   		if ('localStorage' in window && window['localStorage'] !== null) {
               	try {
@@ -56,7 +56,11 @@
 			navigator.splashscreen.hide();
 		}, clickEvents: function() {
         	$(".addExcersiceBtn").click(function() {
-        		localStorage2.addExersice();
+        		localStorage.addExersice();
+        	});
+
+        	$(".deleteExcersis").click(function() {
+        		localStorage.cleanLocalstorage();
         	});
 
         	$('.btn_start').click(function(){
