@@ -34,7 +34,7 @@ Exercise.prototype.startWatch = function() {
 
 	self.exerciseIntervals.watchExercise = setInterval(function() {
 		console.log('hurr-duur-durr?');
-		var inBounds = self.checkIfWithinBounds();
+		var inBounds = self.checkIfInBounds();
 		if(inBounds) {
 
 		}
@@ -55,16 +55,48 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
 	}
 }
 
-Exercise.prototype.checkIfWithinBounds = function() {
+Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
+	var maxValues = this.getMaxValuesBounds();
+	var previousPos = this.acceleration.previousPos;
+	var currentPos = this.acceleration.currentPos;
+	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);
+	
+	if(currentDirection.movX != maxValues.movementDirection.movX || 
+		currentDirection.movY != maxValues.movementDirection.movY) {
+		return false;
+	}else { 
+
+
+	}
+	
+	
+
+	return inBounds;
+}
+
+Exercise.prototype.getMaxValuesBounds = function() {
 	var currentPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
 	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
 	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
-	console.log('Direction output: ');
-	console.log(currentDirection.movX);
-	console.log(currentDirection.movY);
+	var maxValues = {
+		movementDirection: currentDirection
+	};
+	
+	//Shit is going to the right
+	if(currentDirection == this.accelerometer.movementDirections.right) {
+		maxValues.x = nextPos.x;
+	}else if(currentDirection == this.accelerometer.movementDirections.left) {
+		maxValues.x = currentPos.x;
+	}
 
-	return inBounds;
+	if(currentDirection == this.accelerometer.movementDirections.up) {
+		maxValues.y = currentPos.y;
+	}else if(currentDirection == this.accelerometer.movementDirections.down) {
+		maxValues.y = nextPos.y;
+	}
+
+	return maxValues;
 }
 
 Exercise.prototype.endRecord = function() {
