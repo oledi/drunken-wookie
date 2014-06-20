@@ -97,6 +97,14 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
  */
 Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
+<<<<<<< HEAD
+=======
+	var currentPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber];
+	var nextPos = JSON.parse(this.exercise.breakpoints)[this.exercise.breakpointNumber + 1];
+	var currentDirection = this.accelerometer.getMovementDirectionBetween(currentPos, nextPos);
+	
+	var maxValues = this.getMaxValuesBounds();
+>>>>>>> origin/master
 	var previousPos = this.accelerometer.acceleration.previousPos;
 	var currentPos = this.accelerometer.acceleration.currentPos;
 	var currentDirection = this.accelerometer.getMovementDirectionBetween(previousPos, currentPos);4
