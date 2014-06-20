@@ -12,6 +12,7 @@
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
 
+
 			navigator.splashscreen.hide();
 		}, update: function() {
 

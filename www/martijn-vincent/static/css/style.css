@@ -1,0 +1,243 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    overflow:hidden;
+    font-size: 1em;
+    background: url(/drunken-wookie/www/martijn-vincent/static/img/achtergrond.jpg) repeat-y;
+    font-family: 'Oxygen', sans-serif;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'museo500';
+    font-size: 1em;
+}
+
+.title-bar {
+    padding: 0.8em 0;
+    position: absolute;
+    width: 100%;
+    background-color: #0B4370;
+    color: white;
+    text-align: center;
+}
+
+.title-bar h1 {
+    margin: 0 0 0.2em 0;
+}
+
+.title-bar h2 {
+    margin: 0.4em 0 0 0;
+    font-family: 'museo300';
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.title-bar a {
+    position: absolute;
+    margin-top: 0.5em;
+    margin-bottom: 1px;
+    left: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: 'museo500';
+    font-size: 1.1em;
+
+}
+
+.title-bar img {
+    height: 15px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 3px;
+}
+
+/* index.html */
+#pop {
+    background-image: none;
+}
+
+#pop-image {
+    float: left;
+}
+
+#categories,
+#categories a {
+    position: absolute;
+}
+
+#categories a {
+    padding: 10px;
+    border: 1px solid #5E5E5E;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    text-decoration: none;
+    text-align: center;
+    color: #424242;
+}
+
+#categories a:active {
+    box-shadow: 0 0 15px #ffffff;
+}
+
+#categories a:nth-of-type(1),
+#categories a:nth-of-type(2) {
+    width: 60px;
+    height: 40px;
+}
+
+#categories a:nth-of-type(3),
+#categories a:nth-of-type(4) {
+    width: 52px;
+    height: 41px;
+}
+
+#categories a:nth-of-type(1) {
+    top: 190px;
+    left: 20px;
+}
+
+#categories a:nth-of-type(2) {
+    top: 190px;
+    left: 220px;
+}
+
+#categories a:nth-of-type(3) {
+    top: 420px;
+    left: 80px;
+}
+
+#categories a:nth-of-type(4) {
+    top: 420px;
+    left: 160px;
+}
+
+/* Exercises.html */
+#list {
+    margin-top: 65px;
+    display: inline-block;
+    width: 100%;
+}
+
+.list-row {
+    display: inline;
+    float: left;
+    clear: left;
+    width: 100%;
+}
+
+.list-item {
+    float: left;
+    width: 160px;
+    height: 160px;
+}
+
+.list-item a {
+    display: block;
+    width: 140px;
+    height: 140px;
+    margin: 9px auto 0 auto;
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.42);
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list-item a:active {
+    box-shadow: 0 0 15px #ffffff;
+}
+
+.list-item a img {
+    width: 50%;
+    margin-top: 20px;
+}
+
+.list-item a p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/*.btn_start {*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*background: #59ae9f;*/
+    /*margin: 0 auto;*/
+    /*margin-top: 100px;*/
+    /*border-radius: 100px;*/
+/*}*/
+
+/*.btn_start h1 {*/
+    /*text-align: center;*/
+    /*color: #fff;*/
+    /*font-size: 30px;*/
+    /*margin-top: 80px;*/
+    /*float: left;*/
+    /*width: 100%;*/
+/*}*/
+
+/*.btn_stop {*/
+    /*display: none;*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*background: red;*/
+    /*margin: 0 auto;*/
+    /*margin-top: 100px;*/
+    /*border-radius: 100px;*/
+/*}*/
+
+/*.btn_stop h1 {*/
+    /*text-align: center;*/
+    /*color: #fff;*/
+    /*font-size: 30px;*/
+    /*margin-top: 80px;*/
+    /*float: left;*/
+    /*width: 100%;*/
+/*}*/
+
+@font-face {
+    font-family: 'museo300';
+    src: url('fonts/museo-300-webfont.eot');
+    src: url('fonts/museo-300-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-300-webfont.woff') format('woff'), url('fonts/museo-300-webfont.ttf') format('truetype'), url('fonts/museo-300-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('fonts/museo-500-webfont.eot');
+    src: url('fonts/museo-500-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-500-webfont.woff') format('woff'), url('fonts/museo-500-webfont.ttf') format('truetype'), url('fonts/museo-500-webfont.svg#museo500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('fonts/museo-700-webfont.eot');
+    src: url('fonts/museo-700-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/museo-700-webfont.woff') format('woff'), url('fonts/museo-700-webfont.ttf') format('truetype'), url('fonts/museo-700-webfont.svg#museo700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+

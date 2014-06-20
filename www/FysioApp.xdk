@@ -2,14 +2,12 @@
   "project": {
     "projectSettingsVersion": "1.0",
     "creationData": {
-      "type": "Blank Project",
-      "src": "blankProject",
-      "projectGuid": "cd2f2222-208e-49d7-98f1-61658f34cba9",
-      "lastModifiedDate": 1402571666544,
-      "creationDate": 1402571666471
+      "type": "Import",
+      "src": "/Users/vincentvandijck/drunken-wookie/www",
+      "projectGuid": "c46a3d3c-943c-4632-bf95-5d3c746edff1",
+      "lastModifiedDate": 1403039303965,
+      "creationDate": 1403039303933
     },
-    "sourceDirectory": "www",
-    "startFile": "index.html",
     "projectFiles": {},
     "projectDirectories": {},
     "libraries": [
@@ -28,6 +26,6 @@
         }
       }
     ],
-    "serviceMethods": []
+    "services": []
   }
 }

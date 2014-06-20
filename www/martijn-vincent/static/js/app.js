@@ -36,44 +36,44 @@
 				$('.btn_stop').toggle();
 				
 				exercise.saveRecord();
-			
-				// $('.pages').hide();
-				// $('#page2').show();
+
+//				$('.pages').hide();
+//				$('#page2').show();
 			});
 
-			$('#page1').show();
+//			$('#page1').show();
 	
-			$('#page2 #bgcontainer_menu').click(function(){
-				
-			   	$('.pages').hide();
-				$('#page1').show();
-					 
-			    return false;
-			});
-
-			$('#page3 #bgcontainer_menu').click(function(){
-				
-			   	$('.pages').hide();
-				$('#page2').show();
-					 
-			    return false;
-			});
-			
-			$('#page1 a').click(function(){
-				
-			   	$('.pages').hide();
-				$('#page2').show();
-					 
-					 return false;
-			});
-			
-			$('#page2 a').click(function(){
-				
-			   	$('.pages').hide();
-				$('#page3').show();
-					 
-			    return false;
-			});
+//			$('#page2 #bgcontainer_menu').click(function(){
+//
+//			   	$('.pages').hide();
+//				$('#page1').show();
+//
+//			    return false;
+//			});
+//
+//			$('#page3 #bgcontainer_menu').click(function(){
+//
+//			   	$('.pages').hide();
+//				$('#page2').show();
+//
+//			    return false;
+//			});
+//
+//			$('#page1 a').click(function(){
+//
+//			   	$('.pages').hide();
+//				$('#page2').show();
+//
+//					 return false;
+//			});
+//
+//			$('#page2 a').click(function(){
+//
+//			   	$('.pages').hide();
+//				$('#page3').show();
+//
+//			    return false;
+//			});
         }
 	};
 

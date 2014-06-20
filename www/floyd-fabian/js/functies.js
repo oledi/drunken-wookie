@@ -24,12 +24,13 @@ $(document).ready(function(){
 
 	// Start en stop functie
 	
-	 $('.btn_start').click(function(){
-	   	 $('.btn_start').toggle();
-		 $('.btn_stop').toggle();
+	 // $('.btn_start').click(function(){
+	 //   	 $('.btn_start').toggle();
+		//  $('.btn_stop').toggle();
 		 
-		 start();
-	 });
+		//  start();
+	 // });
+
 	 $('.btn_stop').click(function(){
 	   	$('.btn_start').toggle();
 		$('.btn_stop').toggle();
