@@ -1,3 +1,9 @@
+/**
+ *	Excersise function/object
+ *
+ *	Regulates the excersises done by users and the record of 
+ * 	possible new excersises. 
+ */
 function Exercise(accelerometer) {
 	this.exerciseIntervals = {};
 	this.breakpoints = [];
@@ -10,6 +16,9 @@ function Exercise(accelerometer) {
 	this.buttons = {};
 }
 
+/** 
+ *	Start the recording of a new excersise
+ */
 Exercise.prototype.startRecord = function() {
 	var self = this;
 
@@ -28,6 +37,10 @@ Exercise.prototype.startRecord = function() {
 	}, 50);
 }
 
+/**
+ *	Start the watch during the excersice and generates feedback
+ *	in the form of vibrations
+ */
 Exercise.prototype.startWatch = function() {
 	var self = this;
 	self.setTimeoutNextBreakpoint();
@@ -40,14 +53,28 @@ Exercise.prototype.startWatch = function() {
 	}, 500);
 }
 
+/** 
+ *	Causes the phone to vibrate
+ *
+ *	@param 	miliseconds 		Vibrate duration in miliseconds
+ */
 Exercise.prototype.vibrate = function(miliseconds) {
 	navigator.notification.vibrate(milliseconds)
 }
 
+/**
+ *	Causes the phone to make a beeping noise
+ *
+ *	@param 	times 		The amount of times the beeping noise should be made
+ */
 Exercise.prototype.beep = function(times) {
 	navigator.notification.beep(times);
 }
 
+/** 
+ *	Sets an timeout interval for the current breakpoint. When completed
+ * 	the current breakpoint number is added and a new interval is set
+ */
 Exercise.prototype.setTimeoutNextBreakpoint = function() {
 	var self = this;
 
@@ -62,6 +89,12 @@ Exercise.prototype.setTimeoutNextBreakpoint = function() {
 	}
 }
 
+/** 
+ *	Checks if the user is with the range between the two breakpoints
+ *	and not overextending or leaving the 'bounds' that is set
+ *
+ *	@retur 	inBouns 		Returns if the user is within the bounds
+ */
 Exercise.prototype.checkIfInBounds = function() {
 	var inBounds = true;
 	var maxValues = this.getMaxValuesBounds();
@@ -106,6 +139,9 @@ Exercise.prototype.checkIfInBounds = function() {
 	return inBounds;
 }
 
+/**
+ *	Stops the recording of the excersice
+ */
 Exercise.prototype.endRecord = function() {
 	clearInterval(this.exerciseIntervals.recordExercise);
 
@@ -121,9 +157,15 @@ Exercise.prototype.endRecord = function() {
     context.appendChild(saveRecordBtn);
 }
 
+/**
+ *	Stores the excersice that has just been recorded in the localStorage
+ */
 Exercise.prototype.saveRecord = function() {
 	if(typeof(Storage) !== "undefined") {
 
+		// TEMP - clear the record interval
+		clearInterval(this.exerciseIntervals.recordExercise);
+		
 		// minus 2 to get the second last entry as last. Since that is the last entry that has a duration
 		for(var z = 0; z < this.breakpoints.length - 1; z++) {
 			this.breakpoints[z].duration = this.breakpoints[z+1].timestamp - this.breakpoints[z].timestamp;
