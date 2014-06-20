@@ -65,7 +65,7 @@
 			$('.btn_stop').click(function(){
 			   	$('.btn_start').toggle();
 				$('.btn_stop').toggle();
-				
+
 				exercise.saveRecord();
 
 			});
