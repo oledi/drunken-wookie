@@ -88,9 +88,5 @@
         }
 	};
 
-    document.getElementById('vid1').addEventListener('loadedmetadata', function() {
-        this.currentTime = 500;
-    }, false);
-
 	document.addEventListener("deviceready", controller.init, false);
 })();
