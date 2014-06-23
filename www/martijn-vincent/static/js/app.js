@@ -55,6 +55,7 @@
 				}
 			}, 500);
         }, clickEvents: function() {
+
         	$('.btn_start').click(function(){
 			   	$('.btn_start').toggle();
 				$('.btn_stop').toggle();
@@ -70,8 +71,26 @@
 
 			});
 
+            $('.btn_record_start').click(function() {
+                $('.btn_record_start').toggle();
+                $('.btn_record_stop').toggle();
+
+                exercise.startWatch();
+            });
+
+            $('.btn_record_stop').click(function() {
+                $('.btn_record_start').toggle();
+                $('.btn_record_stop').toggle();
+
+                exercise.stopWatch();
+            });
+
         }
 	};
+
+    document.getElementById('vid1').addEventListener('loadedmetadata', function() {
+        this.currentTime = 500;
+    }, false);
 
 	document.addEventListener("deviceready", controller.init, false);
 })();

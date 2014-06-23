@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95e6489-af63-42a1-b152-e1bedf393e3e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/martijn-vincent/record-exercise.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/video/Exercise_Clip.mp4" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/video/Exercise_Clip.mp4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_left.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_left.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_right.png" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,28 +34,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="53" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="263" column="21" selection-start="4307" selection-end="4307" vertical-scroll-proportion="0.7929515" vertical-offset="3405" max-vertical-offset="5220">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="during-exercise.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/during-exercise.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="84" selection-start="1653" selection-end="1653" vertical-scroll-proportion="-21.75" vertical-offset="138" max-vertical-offset="840">
+            <state line="206" column="1" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.69162995" vertical-offset="2619" max-vertical-offset="5670">
               <folding />
             </state>
           </provider>
@@ -81,19 +69,20 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/www/static/css/style.css" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises.html" />
-        <option value="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-left-arm.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-right-leg.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-right-arm.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-left-leg.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-legs.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-arms.html" />
-        <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-knees.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/index.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-ankles.html" />
-        <option value="$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" />
+        <option value="$PROJECT_DIR$/www/martijn-vincent/record-exercise.html" />
+        <option value="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" />
+        <option value="$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html" />
+        <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
       </list>
     </option>
@@ -203,62 +192,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drunken-wookie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drunken-wookie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="martijn-vincent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drunken-wookie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drunken-wookie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="martijn-vincent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -272,6 +205,7 @@
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -322,7 +256,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30136007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3099499" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -330,6 +264,20 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3099499" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -350,11 +298,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="51" selection-start="1337" selection-end="1337" vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="705" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="95" selection-start="1088" selection-end="1088" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645" />
@@ -401,11 +344,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drunken-wookie.xdk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drunken-wookie.xdke">
@@ -454,61 +397,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drunken-wookie.xdk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="570" />
-      </provider>
       <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
         <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="570" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/drunken-wookie.xdke">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise6.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise7.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise8.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise5.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_left.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_check.png">
@@ -519,16 +417,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="19" selection-start="365" selection-end="365" vertical-scroll-proportion="0.3429878" vertical-offset="0" max-vertical-offset="656" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/static/js/handlers/exercise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="66" selection-start="3321" selection-end="3321" vertical-scroll-proportion="2.1585903" vertical-offset="0" max-vertical-offset="1860" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/floyd-fabian/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="6" selection-start="721" selection-end="721" vertical-scroll-proportion="-1.7853881" vertical-offset="1458" max-vertical-offset="2115" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/static/css/style.css">
@@ -551,21 +439,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3255" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="40" selection-start="1963" selection-end="1963" vertical-scroll-proportion="0.5915916" vertical-offset="506" max-vertical-offset="1230" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="20" selection-start="1789" selection-end="1789" vertical-scroll-proportion="0.543379" vertical-offset="363" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercises-legs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="1165" selection-end="1165" vertical-scroll-proportion="-0.30136988" vertical-offset="663" max-vertical-offset="1320" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercises-knees.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="61" column="27" selection-start="2336" selection-end="2336" vertical-scroll-proportion="0.70319635" vertical-offset="453" max-vertical-offset="1110" />
@@ -581,38 +454,127 @@
         <state line="40" column="41" selection-start="1412" selection-end="1412" vertical-scroll-proportion="0.543379" vertical-offset="243" max-vertical-offset="900" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/floyd-fabian/static/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="71" selection-end="71" vertical-scroll-proportion="0.15418503" vertical-offset="0" max-vertical-offset="1875" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="53" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="26" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.40334857" vertical-offset="305" max-vertical-offset="990" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/icons/loader.gif">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/floyd-fabian/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="39" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.40528634" vertical-offset="759" max-vertical-offset="2355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/static/js/handlers/exercise.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="29" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.33282444" vertical-offset="427" max-vertical-offset="3270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/record-exercise.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="83" selection-start="1748" selection-end="1748" vertical-scroll-proportion="0.9086758" vertical-offset="123" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/during-exercise.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="84" selection-start="1653" selection-end="1653" vertical-scroll-proportion="-21.75" vertical-offset="138" max-vertical-offset="840">
+        <state line="41" column="14" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.6894977" vertical-offset="177" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/floyd-fabian/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="14" selection-start="2615" selection-end="2615" vertical-scroll-proportion="0.456621" vertical-offset="1035" max-vertical-offset="1755">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="53" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.72602737" vertical-offset="78" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/icons/icon_arrow_left.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercise-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="22" selection-start="1239" selection-end="1239" vertical-scroll-proportion="0.56621003" vertical-offset="183" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise4.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise5.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise6.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise7.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/img/Exercise8.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="30" selection-start="2680" selection-end="2680" vertical-scroll-proportion="0.8017621" vertical-offset="834" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="89" selection-start="1727" selection-end="1727" vertical-scroll-proportion="-14.0" vertical-offset="354" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/martijn-vincent/exercises-legs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.06849315" vertical-offset="435" max-vertical-offset="1335">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="263" column="21" selection-start="4307" selection-end="4307" vertical-scroll-proportion="0.7929515" vertical-offset="3405" max-vertical-offset="5220">
+        <state line="206" column="1" selection-start="3255" selection-end="3255" vertical-scroll-proportion="0.69162995" vertical-offset="2619" max-vertical-offset="5670">
           <folding />
         </state>
       </provider>

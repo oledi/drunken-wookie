@@ -61,7 +61,7 @@ h3 {
     left: 10px;
     color: white;
     text-decoration: none;
-    font-family: 'museo500';
+    font-family: 'museo700';
     font-size: 1.1em;
 
 }
@@ -169,6 +169,7 @@ h3 {
 
 .list-item a:active {
     box-shadow: 0 0 15px #ffffff;
+    background-color: rgba(255, 255, 255, 0.72);
 }
 
 .list-item a img {
@@ -177,6 +178,7 @@ h3 {
 }
 
 .list-item a p {
+    font-family: museo500;
     margin: 0;
     padding: 0;
 }
@@ -189,7 +191,12 @@ h3 {
 
 #details section h3 {
     margin: 0.6em 0;
-    font-family: museo700;
+    font-family: museo500;
+    font-size: 20px;
+}
+
+#details section p {
+    margin: 1em 0;
 }
 
 #details section:nth-of-type(1) {
@@ -199,19 +206,10 @@ h3 {
     margin: 0 auto;
 }
 
-#details section:nth-of-type(2),
-#details section:nth-of-type(3) {
-    width: 37.3%;
-    padding: 0 4%;
-    float: left;
-    text-align: center;
-    min-height: 8em;
-}
-
 #details section:nth-of-type(2) {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    margin: 2% 1% 8% 3%;
+    width: 272px;
+    padding: 0 4%;
+    text-align: center;
 }
 
 #details section:nth-of-type(2) ul {
@@ -220,30 +218,45 @@ h3 {
     margin: 0;
 }
 
-#details section:nth-of-type(3) {
+#details section:nth-of-type(2) {
     background-color: rgba(90, 222, 255, 0.57);
     border: 1px solid rgba(90, 222, 255, 0.8);
-    margin: 2% 3% 8% 1%;
+    margin: 2% 3% 2% 3%;
 }
 
-#details section:nth-of-type(4) {
+#details section:nth-of-type(3) {
     clear: both;
+    width: 94%;
+    margin: 0 auto;
 }
 
-#details section:nth-of-type(4) a {
+#details section:nth-of-type(3) a {
     color: rgb(255, 255, 255);
-    background-color: rgba(255, 169, 60, 0.59);
-    border: 1px solid rgba(255, 165, 82, 0.8);
+    background-color: rgba(255, 169, 60, 0.86);
+    border: 1px solid rgba(253, 210, 170, 1);
+    font-size: 20px;
+    font-family: 'museo700';
+    font-weight: bold;
     text-decoration: none;
     padding: 0.6em;
     margin: 0 auto;
     display: block;
     text-align: center;
-    width: 36%;
+}
+
+#details section:nth-of-type(3) a:active {
+    background-color: rgba(255, 169, 60, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+#details section:nth-of-type(3) a img {
+    height: 18px;
+    margin-bottom: -3px;
+    margin-left: 6px;
 }
 
 /* during-exercise.html */
-#buttons {
+.buttons {
     margin-top: 100px;
 }
 
@@ -268,7 +281,12 @@ h3 {
 .btn_start {
     width: 150px;
     height: 150px;
-    background: #59ae9f;
+    background: #59AE9F;
+    background: linear-gradient(top,  #59AE9F,  #30CF5A);
+    background: -ms-linear-gradient(top,  #59AE9F,  #30CF5A);
+    background: -webkit-gradient(linear, left top, left bottom, from(#59AE9F), to(#30CF5A));
+    background: -moz-linear-gradient(top,  #59AE9F,  #30CF5A);
+    box-shadow: inset 0 -1px 9px #000000;
     margin: 0 auto;
     border-radius: 100%;
 }
@@ -287,7 +305,12 @@ h3 {
     display: none;
     width: 150px;
     height: 150px;
-    background: #e53a3a;
+    background: #E52720;
+    background: linear-gradient(top,  #E52720,  #DE6662);
+    background: -ms-linear-gradient(top,  #E52720,  #DE6662);
+    background: -webkit-gradient(linear, left top, left bottom, from(#E52720), to(#DE6662));
+    background: -moz-linear-gradient(top,  #E52720,  #DE6662);
+    box-shadow: inset 0 -1px 9px #000000;
     margin: 0 auto;
     border-radius: 100%;
     text-align: center;
@@ -297,6 +320,10 @@ h3 {
     margin-top: 4em;
 }
 
+#btn_record_stop h2 {
+    font-size: 26px;
+    margin-top: 45px;
+}
 .btn_stop h2 {
     text-align: center;
     color: #fff;
