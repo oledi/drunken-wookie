@@ -1,3 +1,5 @@
+var APP = APP || {};
+
 (function () {
 	'use strict';
 
@@ -40,112 +42,127 @@
 			localStorage.clear();
 		}
 	}
-
-	var controller = {
+	
+	
+	APP.controller = {
 		init: function () {
 			$('#page1').show();
-            sensors.accelerometer = new Accelerometer();
-            exercise = new Exercise(sensors.accelerometer);
-
+        		sensors.accelerometer = new Accelerometer();
+            		exercise = new Exercise(sensors.accelerometer);
 			storage.setExercises();
-            controller.clickEvents();
+        		controller.clickEvents();
+        		navigator.splashscreen.hide();
+		},
+		
+		clickEvents: function () {
+			// More code here
+		}
+	}
+	// var controller = {
+	// 	init: function () {
+	// 		$('#page1').show();
+ //           sensors.accelerometer = new Accelerometer();
+ //           exercise = new Exercise(sensors.accelerometer);
 
-			navigator.splashscreen.hide();
-		}, clickEvents: function() {
-        	$(".addExcersiceBtn").click(function() {
-        		storage.addExersice();
-        	});
+	// 		storage.setExercises();
+ //           controller.clickEvents();
 
-        	$(".deleteExcersis").click(function() {
-        		storage.cleanLocalstorage();
-        	});
+	// 		navigator.splashscreen.hide();
+	// 	}, clickEvents: function() {
+ //       	$(".addExcersiceBtn").click(function() {
+ //       		storage.addExersice();
+ //       	});
 
-        	// Page 3 is excersises
-        	// Page 4 is recording
-        	$('#page3 .btn_start').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+ //       	$(".deleteExcersis").click(function() {
+ //       		storage.cleanLocalstorage();
+ //       	});
 
-				exercise.startRecord();
-			});
+ //       	// Page 3 is excersises
+ //       	// Page 4 is recording
+ //       	$('#page3 .btn_start').click(function(){
+	// 		   	$('.btn_start').toggle();
+	// 			$('.btn_stop').toggle();
 
-			$('#page4 .btn_start').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+	// 			exercise.startRecord();
+	// 		});
 
-				exercise.startRecord();
-			});
+	// 		$('#page4 .btn_start').click(function(){
+	// 		   	$('.btn_start').toggle();
+	// 			$('.btn_stop').toggle();
 
-			$('#page3 .btn_stop').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+	// 			exercise.startRecord();
+	// 		});
+
+	// 		$('#page3 .btn_stop').click(function(){
+	// 		   	$('.btn_start').toggle();
+	// 			$('.btn_stop').toggle();
 			
-				exercise.saveRecord();
+	// 			exercise.saveRecord();
 
-				// $('.pages').hide();
-				// $('#page2').show();
-			});
+	// 			// $('.pages').hide();
+	// 			// $('#page2').show();
+	// 		});
 
-			$('#page4 .btn_stop').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+	// 		$('#page4 .btn_stop').click(function(){
+	// 		   	$('.btn_start').toggle();
+	// 			$('.btn_stop').toggle();
 				
-				exercise.saveRecord();
+	// 			exercise.saveRecord();
 
-				// $('.pages').hide();
-				// $('#page1').show();
-			});
+	// 			// $('.pages').hide();
+	// 			// $('#page1').show();
+	// 		});
 
-			$('#page1').show();
+	// 		$('#page1').show();
 	
-			$('#page2 #bgcontainer_menu').click(function(){
+	// 		$('#page2 #bgcontainer_menu').click(function(){
 				
-			   	$('.pages').hide();
-				$('#page1').show();
+	// 		   	$('.pages').hide();
+	// 			$('#page1').show();
 					 
-			    return false;
-			});
+	// 		    return false;
+	// 		});
 
-			$('#page3 #bgcontainer_menu').click(function(){
+	// 		$('#page3 #bgcontainer_menu').click(function(){
 				
-			   	$('.pages').hide();
-				$('#page2').show();
+	// 		   	$('.pages').hide();
+	// 			$('#page2').show();
 					 
-			    return false;
-			});
+	// 		    return false;
+	// 		});
 			
-			$('#page1 a').click(function(){
+	// 		$('#page1 a').click(function(){
 				
-			   	$('.pages').hide();
-				$('#page2').show();
+	// 		   	$('.pages').hide();
+	// 			$('#page2').show();
 					 
-					 return false;
-			});
+	// 				 return false;
+	// 		});
 			
-			$('#page2 a').click(function(){
+	// 		$('#page2 a').click(function(){
 				
-			   	$('.pages').hide();
-				$('#page3').show();
+	// 		   	$('.pages').hide();
+	// 			$('#page3').show();
 					 
-			    return false;
-			});
+	// 		    return false;
+	// 		});
 
-			$('#page2 #bgcontainer_menu').click(function(){
-			   	$('.pages').hide();
-				$('#page1').show();
+	// 		$('#page2 #bgcontainer_menu').click(function(){
+	// 		   	$('.pages').hide();
+	// 			$('#page1').show();
 					 
-			    return false;
-			});
+	// 		    return false;
+	// 		});
 
-			$('#page4 #bgcontainer_menu').click(function(){
-			   	$('.pages').hide();
-				$('#page1').show();
+	// 		$('#page4 #bgcontainer_menu').click(function(){
+	// 		   	$('.pages').hide();
+	// 			$('#page1').show();
 					 
-			    return false;
-			});
+	// 		    return false;
+	// 		});
 
-        }
-	};
+ //       }
+	// };
 
 	document.addEventListener("deviceready", controller.init, false);
 })();
