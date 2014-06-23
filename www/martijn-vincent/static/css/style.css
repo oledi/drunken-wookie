@@ -30,7 +30,8 @@ section {
 h1,
 h2,
 h3 {
-    font-family: 'museo500';
+    /*Get some fallbacks for the font-families!*/
+    font-family: 'museo500'; 
     font-size: 1em;
 }
 
@@ -49,6 +50,7 @@ h3 {
 
 .title-bar h2 {
     margin: 0.4em 0 0 0;
+    /*Get some fallbacks for the font-families!*/
     font-family: 'museo300';
     font-size: 14px;
     color: rgba(255, 255, 255, 0.72);
@@ -58,6 +60,7 @@ h3 {
     position: absolute;
     margin-top: 0.5em;
     margin-bottom: 1px;
+    /*maybe do something like: left: 0.6em?*/
     left: 10px;
     color: white;
     text-decoration: none;
