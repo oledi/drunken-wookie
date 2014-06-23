@@ -92,6 +92,7 @@ h3 {
     border: 1px solid #5E5E5E;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 100%;
+    font-family: 'museo500';
     text-decoration: none;
     text-align: center;
     color: #424242;
@@ -103,31 +104,35 @@ h3 {
 
 #categories a:nth-of-type(1) {
     width: 77px;
-    height: 23px;
+    height: 18px;
     top: 132px;
     left: 50px;
 }
+
 #categories a:nth-of-type(2) {
     width: 50px;
-    height: 22px;
+    height: 18px;
     top: 190px;
     left: 220px;
 }
+
 #categories a:nth-of-type(3) {
     width: 48px;
-    height: 23px;
+    height: 19px;
     top: 368px;
     left: 90px;
 }
+
 #categories a:nth-of-type(4) {
     width: 47px;
-    height: 23px;
+    height: 19px;
     top: 420px;
     left: 173px;
 }
+
 #categories a:nth-of-type(5) {
     width: 48px;
-    height: 23px;
+    height: 19px;
     top: 470px;
     left: 93px;
 }
@@ -359,8 +364,3 @@ h3 {
     font-style: normal;
 
 }
-
-
-
-
-
