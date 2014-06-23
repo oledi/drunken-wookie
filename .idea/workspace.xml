@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c95e6489-af63-42a1-b152-e1bedf393e3e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" afterPath="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" afterPath="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
     </list>
     <ignored path="drunken-wookie.iws" />
@@ -27,19 +25,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="36" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.60273975" vertical-offset="54" max-vertical-offset="735">
+            <state line="233" column="28" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="5655">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="337" column="16" selection-start="5929" selection-end="5929" vertical-scroll-proportion="0.0" vertical-offset="4599" max-vertical-offset="5655">
+            <state line="38" column="54" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.89041096" vertical-offset="0" max-vertical-offset="735">
               <folding />
             </state>
           </provider>
@@ -84,8 +82,8 @@
         <option value="$PROJECT_DIR$/www/martijn-vincent/exercises-shoulder.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/index.html" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/during-exercise.html" />
-        <option value="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
         <option value="$PROJECT_DIR$/www/martijn-vincent/static/js/app.js" />
+        <option value="$PROJECT_DIR$/www/martijn-vincent/static/css/style.css" />
       </list>
     </option>
   </component>
@@ -215,7 +213,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,14 +593,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="337" column="16" selection-start="5929" selection-end="5929" vertical-scroll-proportion="0.0" vertical-offset="4599" max-vertical-offset="5655">
+        <state line="233" column="28" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.0" vertical-offset="3150" max-vertical-offset="5655">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/martijn-vincent/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.60273975" vertical-offset="54" max-vertical-offset="735">
+        <state line="38" column="54" selection-start="1484" selection-end="1484" vertical-scroll-proportion="0.89041096" vertical-offset="0" max-vertical-offset="735">
           <folding />
         </state>
       </provider>
