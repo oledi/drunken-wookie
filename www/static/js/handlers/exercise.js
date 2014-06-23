@@ -49,6 +49,7 @@ Exercise.prototype.startWatch = function() {
 		console.log("I'm Batman!");
 		var inBounds = self.checkIfInBounds();
 		if(!inBounds) {
+			self.vibrate(250);
 			console.log('Not in bounds / Should be shaking atm');
 		}
 	}, 500);
@@ -60,7 +61,7 @@ Exercise.prototype.startWatch = function() {
  *	@param 	miliseconds 		Vibrate duration in miliseconds
  */
 Exercise.prototype.vibrate = function(miliseconds) {
-	navigator.notification.vibrate(milliseconds)
+	navigator.notification.vibrate(miliseconds)
 }
 
 /**
