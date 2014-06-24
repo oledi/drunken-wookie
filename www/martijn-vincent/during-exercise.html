@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <!-- Meta info -->
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
-    <meta name="author" content="Vincent van Dijck">
+    <head>
+        <!-- Meta info -->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"/>
+        <meta name="author" content="Vincent van Dijck">
+    
+        <!-- Page Title -->
+        <title>FysioApp</title>
+    
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+    
+        <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    
+        <script src='cordova.js'></script>
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+    
+        <!-- App logic -->
+        <script src="../static/js/handlers/exercise.js"></script>
+        <script src="../static/js/handlers/accelerometer.js"></script>
+    
+        <!-- Main app -->
+        <script src="static/js/app.js"></script>
+    
+    </head>
 
-    <!-- Page Title -->
-    <title>FysioApp</title>
-
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
-
-    <script src='cordova.js'></script>
-    <script type="text/javascript" src="static/js/jquery.js"></script>
-
-    <!-- App logic -->
-    <script src="../static/js/handlers/exercise.js"></script>
-    <script src="../static/js/handlers/accelerometer.js"></script>
-
-    <!-- Main app -->
-    <script src="static/js/app.js"></script>
-
-</head>
 <body>
-<section class="title-bar">
-    <a href="exercise-detail.html"><img src="../martijn-vincent/static/img/icons/icon_arrow_left.png" alt="arrow-left"/>Terug</a>
-    <h1>Oefening</h1>
-    <h2>Doe uw oefening</h2>
-</section>
-<section class="buttons">
-    <section class="btn_start">
-        <section id="startBtn">
-            <h2>Start</h2>
-        </section>
-        <p>Druk op 'start' als u klaar bent om te beginnen. Uw oefening wordt dan geregistreerd.</p>
+
+    <section class="title-bar">
+        <a href="exercise-detail.html"><img src="../martijn-vincent/static/img/icons/icon_arrow_left.png" alt="arrow-left"/>Terug</a>
+        <h1>Oefening</h1>
+        <h2>Doe uw oefening</h2>
     </section>
-    <section class="btn_stop">
-        <section id="stopBtn">
-            <h2>Stop</h2>
-            <img src="../martijn-vincent/static/img/icons/loader.gif" alt="loader"/>
+    
+    <section class="buttons">
+    
+        <section class="btn_start">
+        
+            <section id="startBtn">
+                <h2>Start</h2>
+            </section>
+            
+            <p>Druk op 'start' als u klaar bent om te beginnen. Uw oefening wordt dan geregistreerd.</p>
         </section>
-        <p>Klaar met uw oefening? Druk dan op 'stop' om het gegistreren te stoppen.</p>
+        
+        <section class="btn_stop">
+        
+            <section id="stopBtn">
+                <h2>Stop</h2>
+                <img src="../martijn-vincent/static/img/icons/loader.gif" alt="loader"/>
+            </section>
+            
+            <p>Klaar met uw oefening? Druk dan op 'stop' om het gegistreren te stoppen.</p>
+        </section>
+  
     </section>
-</section>
+    
 </body>
+
 </html>
