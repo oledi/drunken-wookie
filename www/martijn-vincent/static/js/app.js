@@ -1,55 +1,53 @@
-var APP = APP || {};
-
 (function () {
-	'use strict';
+    'use strict';
 
-	var exercise = null;
+    var exercise = null;
 
     var sensors = {
         accelerometer: null
     };
 
-	var controller = {
-		init: function () {
+    var controller = {
+        init: function () {
             sensors.accelerometer = new Accelerometer();
             exercise = new Exercise(sensors.accelerometer);
 
             controller.clickEvents();
-			navigator.splashscreen.hide();
-		}, update: function() {
+            navigator.splashscreen.hide();
+        }, update: function () {
 
-			setInterval(function() {
-				if(sensors.accelerometer.breakpoint) {
+            setInterval(function () {
+                if (sensors.accelerometer.breakpoint) {
 
 
-					sensors.accelerometer.breakpoint = false;
-				}
-			}, 500);
-        }, clickEvents: function() {
+                    sensors.accelerometer.breakpoint = false;
+                }
+            }, 500);
+        }, clickEvents: function () {
 
-        	$('.btn_start').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+            $('.btn_start').click(function () {
+                $('.btn_start').toggle();
+                $('.btn_stop').toggle();
 
-				exercise.startRecord();
-			});
+                exercise.startRecord();
+            });
 
-			$('.btn_stop').click(function(){
-			   	$('.btn_start').toggle();
-				$('.btn_stop').toggle();
+            $('.btn_stop').click(function () {
+                $('.btn_start').toggle();
+                $('.btn_stop').toggle();
 
-				exercise.saveRecord();
+                exercise.saveRecord();
 
-			});
+            });
 
-            $('.btn_record_start').click(function() {
+            $('.btn_record_start').click(function () {
                 $('.btn_record_start').toggle();
                 $('.btn_record_stop').toggle();
 
                 exercise.startWatch();
             });
 
-            $('.btn_record_stop').click(function() {
+            $('.btn_record_stop').click(function () {
                 $('.btn_record_start').toggle();
                 $('.btn_record_stop').toggle();
 
@@ -57,7 +55,7 @@ var APP = APP || {};
             });
 
         }
-	};
+    };
 
-	document.addEventListener("deviceready", controller.init, false);
+    document.addEventListener("deviceready", controller.init, false);
 })();
