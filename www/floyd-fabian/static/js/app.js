@@ -1,4 +1,4 @@
-var APP = APP || {};
+ var APP = APP || {};
 
 (function () {
 	'use strict';
@@ -48,13 +48,11 @@ var APP = APP || {};
 		init: function () {
 			$('#page1').show();
         		sensors.accelerometer = new Accelerometer();
-            		exercise = new Exercise(sensors.accelerometer);
-			storage.setExercises();
-        		controller.clickEvents();
+            	exercise = new Exercise(sensors.accelerometer);
+				storage.setExercises();
+        		App.controller.clickEvents();
         		navigator.splashscreen.hide();
-		},
-		
-		clickEvents: function () {
+		}, clickEvents: function () {
 			// More code here
 		}
 	}
@@ -164,5 +162,5 @@ var APP = APP || {};
  //       }
 	// };
 
-	document.addEventListener("deviceready", controller.init, false);
+	document.addEventListener("deviceready", APP.controller.init, false);
 })();
